@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./components";
-import { Account, LandingPage, NotFound } from "./pages";
+import {Account, NotFound, LandingPage} from "./pages";
+
 
 import "./index.css";
 
