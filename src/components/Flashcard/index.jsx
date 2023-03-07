@@ -17,9 +17,11 @@ useEffect(() => {
 
       const response = await fetch(`http://localhost:3000/questions/categories/${id}`);
       const data = await response.json();
-     console.log(data)
-      setLength(data.length)
-      setFlashcards(data);
+     
+     const shuffled = data.sort(()=> 0.5 - Math.random())
+     let selected = shuffled.slice(0, limit)
+      setLength(selected.length)
+      setFlashcards(selected);
 
       setLoading(false);
   };
