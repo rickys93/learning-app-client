@@ -5,10 +5,12 @@ function Category({ name, description }) {
     return (
         <>
             <div>
-                <h2>{name}</h2>
-                <div>
-                    {description}
-                </div>
+                <Link to={`/categories/${id}`}>
+                    <h2>{name}</h2>
+                    <div>
+                        {description}
+                    </div>
+                </Link>
             </div>
         </>
     )

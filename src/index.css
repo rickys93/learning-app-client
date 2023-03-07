@@ -1,13 +1,16 @@
-*{
-    background: navajowhite;
+* {
     text-decoration: none;
 }
-.navbar{
+
+body {
+    background: navajowhite;
+}
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.intro-div{
+.intro-div {
     margin-top: 100px;
     text-align: center;
     border: 1px solid black;
@@ -15,10 +18,9 @@
     padding: 10px;
     margin-inline: 500px;
 }
-.h1-lp{
+.h1-lp {
     font-size: 30px;
 }
-.intro{
-font-size: 15px;
+.intro {
+    font-size: 15px;
 }
-

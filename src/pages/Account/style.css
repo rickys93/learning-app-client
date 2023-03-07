@@ -1,0 +1,69 @@
+.display-none {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.acc-form {
+    background-color: white;
+    margin-top: 50px;
+    height: 300px;
+    width: 100%;
+    max-width: 300px;
+    padding: 50px 10px;
+    border-radius: 10px;
+}
+
+.acc-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-form form input,
+button {
+    padding: 5px;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.tab-group {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-group li {
+    list-style: none;
+}
+
+.tab-group a {
+    padding: 10px;
+}
+
+.tab-content h2 {
+    text-align: center;
+}
+
+.tab {
+    background-color: rgb(224, 224, 224);
+}
+
+.tab.active {
+    background-color: red;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
