@@ -1,23 +1,77 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../App";
 
 import './style.css'
 
+
+
 export default function Account() {
+    const {user, setUser} = useContext(UserContext)
     const [showLogin, setShowLogin] = useState(true)
     const [signInEmail, setSignInEmail] = useState("");
     const [signInPassword, setSignInPassword] = useState("");
-    const [fullName, setFullName] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [signUpEmail, setSignUpEmail] = useState("");
     const [signUpPassword, setSignUpPassword] = useState("");
-    const [repeatPassword, setRepeatPassword] = useState("");
+
+    const navigate = useNavigate()
 
     const handleTabClick = (isLoginTab) => {
         setShowLogin(isLoginTab)
     }
 
-    const handleSubmit = (e) => {
+    const handleSignin = async (e) => {
         // Handles the sign-in/sign-up input logic
         e.preventDefault();
+        const options = {
+            method:"POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                email:signInEmail,
+                password:signInPassword
+            })
+        }
+        const response = await fetch("http://localhost:3000/users/login", options)
+        if (response.status === 200) {
+            const data = await response.json()
+            // now set user details to user and navigate to main page 
+            setUser(data.user)
+            console.log('user.token', user.token)
+            localStorage.setItem("token", user.token)
+            navigate("/")
+        }
+    };
+    
+    const handleSignup = async (e) => {
+        // Handles the sign-in/sign-up input logic
+        e.preventDefault();
+        const options = {
+            method:"POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                first_name:firstName,
+                last_name:lastName,
+                email:signUpEmail,
+                password:signUpPassword
+            })
+        }
+        const response = await fetch("http://localhost:3000/users/register", options)
+        if (response.status === 201) {
+            const data = await response.json()
+            // now set user details to user and navigate to main page 
+            setUser(data.user)
+            localStorage.setItem("token", user.token)
+            navigate("/")
+        }
+        
     };
 
     return (
@@ -43,7 +97,7 @@ export default function Account() {
                 </ul>
                 <div className="tab-content">
                     <div className={`signin ${showLogin ? "" : "display-none"}`}>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSignin}>
                             <h2>Sign In</h2>
                             <label 
                                 htmlFor="sign-in-email" 
@@ -78,19 +132,35 @@ export default function Account() {
                     </div>
                     <div className={`signup ${showLogin ? "display-none" : ""}`}>
                         <h2>Sign Up</h2>
-                        <form>
-                            <label 
-                                htmlFor="full-name" 
-                                className="visually-hidden">
-                                    Full Name:
-                            </label>
-                            <input
-                                type="text"
-                                id="full-name"
-                                value={fullName}
-                                onChange={(e) => setFullName(e.target.value)}
-                                placeholder={"Enter Full Name"}
-                            />
+                        <form
+                            onSubmit={handleSignup}
+                        >
+                            <div className="name-inputs">
+                                <label 
+                                    htmlFor="first-name" 
+                                    className="visually-hidden">
+                                        First Name:
+                                </label>
+                                <input
+                                    type="text"
+                                    id="first-name"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                    placeholder={"Enter First Name"}
+                                />
+                                <label 
+                                    htmlFor="last-name" 
+                                    className="visually-hidden">
+                                        Last Name:
+                                </label>
+                                <input
+                                    type="text"
+                                    id="last-name"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
+                                    placeholder={"Enter Last Name"}
+                                />
+                            </div>
 
                             <label 
                                 htmlFor="sign-up-email" 

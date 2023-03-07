@@ -29,11 +29,20 @@ button {
     margin: 5px 0;
 }
 
+.name-inputs {
+    display: flex;
+}
+
+.name-inputs input {
+    width: 50%;
+}
+
 .tab-group {
     margin: 0;
     padding-left: 0;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .tab-group li {
@@ -41,7 +50,12 @@ button {
 }
 
 .tab-group a {
-    padding: 10px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.tab-group a:hover {
+    opacity: 0.8;
 }
 
 .tab-content h2 {
@@ -53,7 +67,7 @@ button {
 }
 
 .tab.active {
-    background-color: red;
+    background-color: rgb(255, 127, 127);
 }
 
 .visually-hidden {
