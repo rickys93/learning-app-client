@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import Answers from '../Answers'
-import Result from '../Result'
 import { useNavigate } from 'react-router-dom'
 
 export default function QuizzCard({id, limit}) {

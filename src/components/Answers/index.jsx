@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import "./answers.css"
-import Result from '../Result'
 
 const Answers = ({answers, score, setScore, selected, setSelected, next, limit}) => {
     
