@@ -1,0 +1,13 @@
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-box {
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 20px;
+    float: left;
+    width: 25%;
+    text-align: center;
+}

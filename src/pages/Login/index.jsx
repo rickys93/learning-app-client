@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserContext } from "../../App";
 
+import './style.css'
+
 
 
 export default function Account() {

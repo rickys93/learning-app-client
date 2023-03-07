@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import "./answers.css"
 
-
 const Answers = ({answers, score, setScore, selected, setSelected, next, limit}) => {
     
 

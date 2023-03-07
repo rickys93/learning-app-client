@@ -1,22 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import'./style.css'
+
 export default function CategoryList(props) {
   const { categories } = props;
   return (
-    <div>
+    <div className="categories-list">
       {categories.map((category) => (
         <div
           key={category.id}
           to={`/Quiz/${category.id}`}
-          style={{
-            border: "1px solid gray",
-            padding: "10px",
-            margin: "20px",
-            float: "left",
-            width: "25%",
-            textAlign: "center",
-          }}
+          className="category-box"
         >
           <h3>{category.name}</h3>
           <p>{category.description}</p>
