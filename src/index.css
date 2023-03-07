@@ -7,14 +7,14 @@
     justify-content: space-between;
     align-items: center;
 }
-.intro-div{
+/* .intro-div{
     margin-top: 100px;
     text-align: center;
     border: 1px solid black;
     border-radius: 20px;
     padding: 10px;
     margin-inline: 500px;
-}
+} */
 .h1-lp{
     font-size: 30px;
 }

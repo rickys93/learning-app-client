@@ -9,7 +9,6 @@ export default function Account() {
   const [repeatPassword, setRepeatPassword] = useState("");
 
   const handleSubmit = (e) => {
-    // Handles the sign-in/sign-up input logic
     e.preventDefault();
   };
 
