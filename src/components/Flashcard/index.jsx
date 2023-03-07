@@ -55,7 +55,7 @@ const handlePrev = ()=>{
       </div>
       <div className='button_container'>
       <button className='prev_btn' disabled= {next===0 ?  true: false } onClick={handlePrev}>Prev</button>
-  <button className='next_btn'   onClick={handleNext}>Next</button>
+  <button className='next_btn' disabled= {next===(limit-1) ?  true: false }  onClick={handleNext}>Next</button>
   </div>
   
       </>
