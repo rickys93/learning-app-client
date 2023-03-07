@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -14,6 +15,10 @@ export default function LandingPage() {
           making studying and revision a breeze.
         </p>
       </div>
+
+      <button>
+        <Link to="/categories">Explore Categories</Link>
+      </button>
     </main>
   );
 }
