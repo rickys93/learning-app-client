@@ -45,7 +45,7 @@ export default function App() {
                 <Route path="categories" element={<Categories />} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/signup" element={<Signup/>} />
-                <Route path="/account" element={<Account />} />
+               
                 <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
                 <Route path="/quiz" element={<QuizzPage />} />
                 <Route path="*" element={<NotFound />} />
