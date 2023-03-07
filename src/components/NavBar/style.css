@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    color: rgb(52, 52, 52);
+}
+
+.navlinks a {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navlinks a:not(:last-child) {
+    margin-right: 10px;
+}

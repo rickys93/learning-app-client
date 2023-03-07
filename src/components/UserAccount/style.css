@@ -1,0 +1,16 @@
+.userAccount {
+    display: flex;
+    flex-direction: row;
+}
+
+.userAccount h2 {
+    font-size: large;
+}
+
+.userAccount a {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid rgb(50, 50, 50);
+}

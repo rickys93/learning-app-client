@@ -1,21 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+
+import CategoryList from "../../components/CategoryList";
+import { UserContext } from "../../App";
 
 export default function Categories() {
-  const [category, setCategory] = useState([]);
-  const [stem, setStem] = useState([]);
-  const [noneStem, setNoneStem] = useState([]);
+  const {user, setUser} = useContext(UserContext)
+  const [categories, setCategories] = useState([]);
+  const [stem, setStem] = useState(false);
+  const [noneStem, setNoneStem] = useState(false);
 
   useEffect(() => {
     async function loadCategories() {
-      const response = await fetch("http://localhost:3000/categories");
+      const options = {
+        headers:{
+          "user-id":user.id
+        }
+      }
+      const response = await fetch("http://localhost:3000/categories", options);
       const data = await response.json();
-      setCategory(data);
+      setCategories(data);
     }
     loadCategories();
   }, []);
+
   return (
     <>
       <h1>Categories</h1>
+      <CategoryList categories={categories} />
     </>
   );
 }
