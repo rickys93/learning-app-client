@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CategoryList(props) {
   const { categories } = props;
@@ -19,8 +20,8 @@ export default function CategoryList(props) {
         >
           <h3>{category.name}</h3>
           <p>{category.description}</p>
-          <button>Memorize</button>&nbsp;&nbsp;&nbsp;
-          <button>Quiz</button>
+          <Link to={`/flashcards/${category.id}`}>Flashcards</Link>
+          <Link to={`/quiz/${category.id}`}>Quiz</Link>
         </div>
       ))}
     </div>

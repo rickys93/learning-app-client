@@ -21,7 +21,7 @@ export default function App() {
             if (token) {
                 const options = {
                 headers: {
-                    Authorization: localStorage.getItem("token")
+                    Authorization: token
                     },
                 };
             
@@ -44,7 +44,7 @@ export default function App() {
                 <Route path="categories" element={<Categories />} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/signup" element={<Signup/>} />
-                <Route path="/flashcards" element={<FlashcardPage />} />
+                <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
