@@ -1,0 +1,94 @@
+.card {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+    background-color: white;
+    transform-style: preserve-3d;
+   max-width: 480px;
+   margin:70px auto 0 auto;
+    height: 200px;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+    transition: 0.3s
+}
+
+.card.flip{
+    --rotate-y: 180deg;
+}
+.card  .front,
+.card  .back {
+    position: absolute;
+    padding: 10px;
+    backface-visibility: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.card  .back{
+    transform: rotateY(180deg);
+}
+.next_btn{
+    margin-left: 50px ;
+}
+.prev_btn{
+    margin-right: 50px;
+    
+}
+.counter{
+    bottom: 170px;
+    color: black;
+    position: fixed;
+    left: 15px;
+    background: none;
+}
+.next_btn , .prev_btn {
+    background: gray;
+    width: 80px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px;
+    cursor: pointer;
+}
+.next_btn:active , .prev_btn:active{
+    background-color: rgb(171, 171, 171);
+}
+.button_container {
+    display:flex;
+    justify-content: center;
+}
+.header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     background-color: rgb(186, 248, 186);
+     padding: 3px;
+     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+     margin-top: 30px;
+}
+.form-group {
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: white;
+    
+}
+.form-group > label {
+    background-color: rgb(186, 248, 186);
+    font-size:  0.9rem;
+}
+
+.generate_btn {
+    background-color: rgb(63, 174, 72);
+    border-radius: 5px;
+    padding: 3px 10px;
+    border: none;
+    cursor: pointer;
+}
+.generate_btn:active{
+    background-color: rgb(140, 236, 148);
+}
