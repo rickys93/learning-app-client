@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./components";
 
 
-import {NotFound, LandingPage, FlashcardPage, Categories, Login, Signup, QuizzPage} from "./pages";
+import {NotFound, LandingPage, FlashcardPage, Categories, Login, Signup, QuizPage} from "./pages";
 
 import "./index.css";
 
@@ -46,7 +46,7 @@ export default function App() {
                 <Route path="/login" element={<Login/>} />
                 <Route path="/signup" element={<Signup/>} />
                 <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
-                <Route path="/quiz" element={<QuizzPage />} />
+                <Route path="/quiz/:categoryId" element={<QuizPage />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
