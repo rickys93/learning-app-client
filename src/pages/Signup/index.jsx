@@ -2,50 +2,16 @@ import React, { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserContext } from "../../App";
 
-import './style.css'
-
-
 
 export default function Account() {
     const {user, setUser} = useContext(UserContext)
-    const [loginEmail, setloginEmail] = useState("");
-    const [loginPassword, setloginPassword] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [signUpEmail, setSignUpEmail] = useState("");
     const [signUpPassword, setSignUpPassword] = useState("");
 
     const navigate = useNavigate()
-
-    const handleTabClick = (isLoginTab) => {
-        setShowLogin(isLoginTab)
-    }
-
-    const handlelogin = async (e) => {
-        // Handles the sign-in/sign-up input logic
-        e.preventDefault();
-        const options = {
-            method:"POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                email:loginEmail,
-                password:loginPassword
-            })
-        }
-        const response = await fetch("http://localhost:3000/users/login", options)
-        if (response.status === 200) {
-            const data = await response.json()
-            // now set user details to user and navigate to main page 
-            setUser(data.user)
-            console.log('user.token', user.token)
-            localStorage.setItem("token", user.token)
-            navigate("/")
-        }
-    };
-    
+   
     const handleSignup = async (e) => {
         // Handles the sign-in/sign-up input logic
         e.preventDefault();
@@ -76,60 +42,8 @@ export default function Account() {
     return (
         <main className="login-container">
             <div className="acc-form">
-                <ul className="tab-group">
-                    <li>
-                        <a 
-                            onClick={() => handleTabClick(true)}
-                            className={`tab ${showLogin ? "active" : ""}`}  
-                        >
-                            Log In
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            onClick={() => handleTabClick(false)}
-                            className={`tab ${showLogin ? "" : "active"}`}
-                        >
-                            Sign Up
-                        </a>
-                    </li>
-                </ul>
                 <div className="tab-content">
-                    <div className={`login ${showLogin ? "" : "display-none"}`}>
-                        <form onSubmit={handlelogin}>
-                            <h2>Log In</h2>
-                            <label 
-                                htmlFor="sign-in-email" 
-                                className="visually-hidden">
-                                    Email
-                            </label>
-                            <input
-                                type="email"
-                                id="sign-in-email"
-                                value={loginEmail}
-                                onChange={(e) => setloginEmail(e.target.value)}
-                                placeholder={"Enter Email"}
-                            />
-
-                            <label 
-                                htmlFor="sign-in-password" 
-                                className="visually-hidden">
-                                    Password
-                            </label>
-                            <input
-                                id="sign-in-password" 
-                                type="password"
-                                value={loginPassword}
-                                onChange={(e) => setloginPassword(e.target.value)}
-                                placeholder={"Enter Password"}
-                            />
-                            <button 
-                                type="submit">
-                                    Log In
-                            </button>
-                        </form>
-                    </div>
-                    <div className={`signup ${showLogin ? "display-none" : ""}`}>
+                    <div className={`signup`}>
                         <h2>Sign Up</h2>
                         <form
                             onSubmit={handleSignup}
