@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CategoryList1 from "../../components/CategoryList1";
-// import { CategoryList } from "../../components";
+import CategoryList from "../../components/CategoryList";
 
 export default function Categories() {
   const [categories, setCategories] = useState([]);
@@ -19,7 +18,7 @@ export default function Categories() {
   return (
     <>
       <h1>Categories</h1>
-      <CategoryList1 categories={categories} />
+      <CategoryList categories={categories} />
     </>
   );
 }
