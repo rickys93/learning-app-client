@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 import UserAccount from "../UserAccount";
 
-import './style.css'
+import "./style.css";
 
 export default function NavBar() {
   return (
@@ -14,8 +14,9 @@ export default function NavBar() {
           <NavLink to="/categories">Categories</NavLink>
           <NavLink to="/flashcards">Memorize</NavLink>
           <NavLink to="/quiz">Quiz</NavLink>
+          <NavLink to="./NewFlashcard">Add New Question</NavLink>
         </nav>
-          <UserAccount/>
+        <UserAccount />
       </header>
       <Outlet />
     </>
