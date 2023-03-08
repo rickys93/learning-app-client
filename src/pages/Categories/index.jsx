@@ -5,28 +5,43 @@ import { UserContext } from "../../App";
 
 export default function Categories() {
   const { user, setUser } = useContext(UserContext);
-  const [categories, setCategories] = useState([]);
+  console.log('user', user)
+  const [defaultCategories, setDefaultCategories] = useState([]);
+  const [myCategories, setMyCategories] = useState([])
   // const [stem, setStem] = useState(false);
   // const [noneStem, setNoneStem] = useState(false);
 
   useEffect(() => {
-    async function loadCategories() {
-      const id = user.id ? user.id : "" 
-      const response = await fetch(`http://localhost:3000/categories?user_id=${id}`);
-      console.log('response', response)
-      const data = await response.json();
-      setCategories(data);
+    if (user) {
+      async function loadCategories() {
+        const id = user.id ? user.id : "" 
+        const response = await fetch(`http://localhost:3000/categories?user_id=${id}`);
+        const data = await response.json();
+        const defaultCats = data.filter(category => (category.user_id !== id))
+        setDefaultCategories(defaultCats)
+        const myCats = data.filter(category => (category.user_id === id))
+        setMyCategories(myCats)
+      }
+      loadCategories();
     }
-    loadCategories();
-  }, []);
+  }, [user]);
 
   return (
     <>
-      <h1>Categories</h1>
+      <h2>Categories</h2>
       {/* <button>
         <Link to={"./NewFlashcard"}></Link> New
       </button> */}
-      <CategoryList categories={categories} />
+      <CategoryList categories={defaultCategories} defaultCategories={true} />
+      {
+        Object.keys(user).length ? (
+          <>
+            <h2>My Categories</h2>
+            <CategoryList categories={myCategories} setMyCategories={setMyCategories} defaultCategories={false} />
+          </>
+        ) : null
+      }
+
     </>
   );
 }

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
+import { NewCategoryForm } from '../../components'
+import { UserContext, PopupContext } from "../../App";
+import { NewFlashcard } from "../../pages";
 
 import "./style.css";
 
-export default function CategoryList(props) {
-  const { categories } = props;
+export default function CategoryList({categories, setMyCategories, defaultCategories}) {
+  const {user, setUser} = useContext(UserContext)
+  const { setPopupContent, closePopup, openPopup } = useContext(PopupContext)
+
+  const openAddNewCategory = () => {
+    openPopup(<NewCategoryForm myCategories={categories} setMyCategories={setMyCategories}/>)
+  }
+
   return (
     <div className="categories-list">
-      <Link to={"./NewFlashCard"}>Create New Question</Link>
       {categories.map((category) => (
         <div
           key={category.id}
@@ -18,8 +27,21 @@ export default function CategoryList(props) {
           <p>{category.description}</p>
           <Link to={`/flashcards/${category.id}`}>Flashcards</Link>
           <Link to={`/quiz/${category.id}`}>Quiz</Link>
+          {!defaultCategories ? (
+            <button>Delete</button>
+          ): null}
         </div>
       ))}
+      {!defaultCategories ? (
+        <div className="category-box">
+          <button
+            className="add-category-button"
+            onClick={openAddNewCategory}
+          >
+            +
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CategoryForm(
+export default function NewFlashcardForm({
   category,
   setCategory,
   answer1,
@@ -15,7 +15,7 @@ export default function CategoryForm(
   setCorrectAnswer,
   question,
   setQuestion
-) {
+}) {
   function handleCategory(e) {
     setCategory(e.target.value);
   }

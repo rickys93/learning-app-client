@@ -7,4 +7,7 @@ export {default as Answers} from "./Answers"
 export { default as Login } from "./Login";
 export { default as Signup } from "./Signup";
 
-export { default as CategoryForm } from "./CategoryForm";
+export { default as NewFlashcardForm } from "./NewFlashcardForm";
+export { default as NewCategoryForm } from "./NewCategoryForm";
+export { default as FormComplete } from "./FormComplete";
+
