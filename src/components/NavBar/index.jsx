@@ -17,7 +17,7 @@ export default function NavBar() {
           <span className="bar"></span>
         </div>
         <nav className="navlinks"  id={mobile? "hidden" : ""}>
-          <ul className="menu">
+          <ul >
           <li onClick={()=>mobile? setMobile(!mobile): mobile}><NavLink to="/" className="a">Home</NavLink></li>
           <li onClick={()=>mobile? setMobile(!mobile): mobile}><NavLink to="/categories" className="a">Categories</NavLink></li>
         
