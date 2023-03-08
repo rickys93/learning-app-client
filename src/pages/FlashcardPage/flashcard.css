@@ -1,4 +1,4 @@
-.card {
+.card, .flashcard{
     display: flex;
 
     justify-content: center;
@@ -10,21 +10,36 @@
     transform-style: preserve-3d;
    max-width: 480px;
    margin:40px auto 0 auto;
-    min-height: 100px;
+   
     transform: perspective(1000px) rotateY(var(--rotate-y, 0));
     transition: 0.3s;
     padding: 10px;
+    width: 95%;
 
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.card{
+    min-height: 100px;
+}
+.flashcard{
+    min-height: 200px;
 }
 #category, #amount{
     background-color: white;
 }
 
-.card.flip{
+.card.flip, .flashcard.flip{
     --rotate-y: 180deg;
 }
 .card  .front,
-.card  .back {
+.card  .back,
+.flashcard .front,
+.flashcard .back {
     position: absolute;
     padding: 10px;
     backface-visibility: hidden;
@@ -33,7 +48,8 @@
     font-size: calc(12px + 0.5vw);
 }
 
-.card  .back{
+.card  .back,
+.flashcard .back{
     transform: rotateY(180deg);
 }
 .next_btn{
@@ -65,6 +81,7 @@
 .button_container {
     display:flex;
     justify-content: center;
+    width: 95%;
 }
 .header {
      display: flex;

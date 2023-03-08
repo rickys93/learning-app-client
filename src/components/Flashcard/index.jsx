@@ -32,10 +32,12 @@ useEffect(() => {
 
   const handleNext= ()=>
 {setNext(prev => prev +1)
-
+  {flip? setFlip(!flip):flip}
 }
 const handlePrev = ()=>{
   setNext(prev => prev-1)
+  {flip? setFlip(!flip):flip}
+
 }
  
    function displayCard(){
@@ -43,7 +45,7 @@ const handlePrev = ()=>{
     return (
       <>
       <div
-      className = {`card ${flip ? 'flip' : ''}`}
+      className = {`flashcard ${flip ? 'flip' : ''}`}
        onClick={( )=> setFlip(!flip)}>
         
         <div className='front'>

@@ -1,6 +1,7 @@
 .categories-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 #root {
     text-align: center;
@@ -13,7 +14,7 @@
     float: left;
     width: 25%;
     text-align: center;
-    min-width: 200px;
+    min-width: 250px;
 }
 
 .category-box:hover {
@@ -42,7 +43,9 @@
         margin: 0;
     }
 }
-
+.cat-h2{
+    margin: 20px;
+}
 .add-category-button {
     width: 80px;
     height: 80px;
