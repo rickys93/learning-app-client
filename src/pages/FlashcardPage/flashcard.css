@@ -80,8 +80,11 @@
     display:flex;
     flex-direction: column;
     margin: 5px;
-    background-color: white;
+  
     
+}
+h2{
+    text-align: center;
 }
 .form-group > label {
     background-color: rgb(186, 248, 186);

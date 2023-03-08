@@ -7,15 +7,16 @@ import './style.css'
 
 export default function NavBar() {
 
-  const [mobile, setMobile] = useState(true)
+  const [mobile, setMobile] = useState(false)
   return (
     <>
       <header className="main">
+      
         <div className="navbar">
         <div className="toggle-button" onClick={()=>setMobile(!mobile)}>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
         <nav className="navlinks"  id={mobile? "hidden" : ""}>
           <ul>

@@ -15,7 +15,7 @@ useEffect(() => {
   
   async function loadCards() {
 
-      const response = await fetch(`http://localhost:3000/questions/categories/${id}`);
+      const response = await fetch(`http://localhost:3000/questions/categories/${id}?limit=${limit}`);
       const data = await response.json();
      
      const shuffled = data.sort(()=> 0.5 - Math.random())
@@ -28,7 +28,7 @@ useEffect(() => {
 
   loadCards();
 
-}, [id])
+}, [limit])
 
   const handleNext= ()=>
 {setNext(prev => prev +1)
@@ -61,7 +61,7 @@ const handlePrev = ()=>{
       </>
     )
    }   
-  return loading ? <h2><em>loading...</em></h2> : displayCard();
+  return loading ? <h2><em>Please choose number of questions.</em></h2> : displayCard();
 }
 // const sample= [
 //   {
