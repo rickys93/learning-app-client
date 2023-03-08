@@ -53,5 +53,5 @@ export default function QuizCard({flashcards, length, loading, amount, next, set
         }
     
 
-  return loading ? <h2><em>loading...</em></h2> :  displayCard() 
+  return loading ? <h2><em>Please choose number of questions.</em></h2> :  displayCard() 
 }

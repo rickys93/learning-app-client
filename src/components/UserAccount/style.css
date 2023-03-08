@@ -4,7 +4,7 @@
 }
 
 .userAccount h2 {
-    font-size: large;
+    font-size: calc(13px + 0.5vw);
 }
 
 .userAccount a {
@@ -12,6 +12,17 @@
     margin-right: 10px;
     background-color: white;
     border-radius: 5px;
-    color: black;
+   
     box-shadow: 3px 3px 5px 3px rgb(255 165 0 / 30%);
+}
+.logout{
+    padding: 5px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 5px;
+   font-size: 13px;
+    box-shadow: 3px 3px 5px 3px rgb(255 165 0 / 30%);
+    border: none;
+    margin-left: 5px;
 }

@@ -30,7 +30,7 @@ function UserAccount() {
                 <>
                     <h2>Welcome, {user.first_name}!</h2>
                     <button
-                        onClick={handleLogOut}
+                        onClick={handleLogOut} className="logout"
                     >
                         Log Out
                     </button>

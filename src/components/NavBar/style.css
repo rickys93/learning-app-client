@@ -5,6 +5,7 @@
 .login{
     display: flex;
     align-items: center;
+    align-self: flex-start;
 }
 .navbar {
     display: flex;
@@ -47,12 +48,12 @@
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
+    top: 1.1rem;
     left: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+    width: 20px;
     height: 21px;
 }
 

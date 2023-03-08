@@ -5,12 +5,12 @@ import { QuizCard } from '../../components'
 
 export default function QuizPage() {
     const { categoryId } = useParams()
-    const [categories, setCategories]= useState([])
+    const [name, setName]= useState()
     const [amount, setAmount] = useState()
     const [cat , setCat] = useState(categoryId)
     const [next, setNext] = useState(0)
     const [selected, setSelected] = useState()
-    const categoryEl = useRef()
+    
     const amountEl = useRef()
 
     const [flashcards, setFlashcards] = useState([])
@@ -21,8 +21,9 @@ export default function QuizPage() {
         async function loadCategories() {
             const response = await fetch(`http://localhost:3000/categories`);
             const data = await response.json();
-            console.log('data', data)
-            setCategories(data);
+           
+            setName(data.filter(c => c.id==cat)[0].name)
+           
         };
 
         loadCategories();
@@ -32,7 +33,7 @@ export default function QuizPage() {
 
     async function loadCards(e) {
         e.preventDefault()
-        const catId = categoryEl.current.value
+      
         const amount = amountEl.current.value
         setAmount(amount)
         const response = await fetch(`http://localhost:3000/questions/categories/${cat}?limit=${amount}`);
@@ -44,6 +45,7 @@ export default function QuizPage() {
         const shuffled = data.sort(() => 0.5 - Math.random())
         setLength(shuffled.length)
         setFlashcards(shuffled);
+        console.log(flashcards)
         setNext(0)
         setSelected()
         setLoading(false);
@@ -53,16 +55,9 @@ export default function QuizPage() {
         <>
             <form className='header'>
                 <div className='form-group'>
-                    <label htmlFor = 'category'>Category</label>
-                    <select 
-                        id = "category" 
-                        ref={categoryEl}
-                        value={categoryId}
-                    >
-                        {categories.map(category =>  
-                            <option value={category.id} key = {category.id}>{category.name}</option>
-                        )}
-                    </select>
+                    <h2>{name}</h2>
+                    
+                    
                 </div>
                 <div className='form-group'>
                     <label htmlFor = 'amount'>Number of Questions</label>
