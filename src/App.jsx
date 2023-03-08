@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { NavBar, Popup } from "./components";
 
-import {NotFound, LandingPage, FlashcardPage, Categories, Login, Signup, QuizPage} from "./pages";
+import {NotFound, LandingPage, FlashcardPage, Categories, QuizPage} from "./pages";
 
 import "./index.css";
 
@@ -12,8 +12,8 @@ export const PopupContext = createContext(null)
 
 export default function App() {
     const [user, setUser] = useState({})
-    const [isOpen, setIsOpen] = useState(true)
-    const [popupContent, setPopupContent] = useState("hello");
+    const [isOpen, setIsOpen] = useState(false)
+    const [popupContent, setPopupContent] = useState();
     const contextValue = {
         user, setUser
     }
@@ -51,7 +51,7 @@ export default function App() {
     }, [])
   
   return (
-        <PopupContext.Provider value={{ openPopup, closePopup }}>
+        <PopupContext.Provider value={{ openPopup, closePopup, setPopupContent }}>
         <UserContext.Provider value={contextValue}>
             <div className="App">
                 <Popup isOpen={isOpen} setIsOpen={setIsOpen} content={popupContent}/>
@@ -59,8 +59,6 @@ export default function App() {
                     <Route path="/" element={<NavBar user={user} />}>
                         <Route index element={<LandingPage />} />
                         <Route path="categories" element={<Categories />} />
-                        <Route path="/login" element={<Login/>} />
-                        <Route path="/signup" element={<Signup/>} />
                         <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
                         <Route path="/quiz/:categoryId" element={<QuizPage />} />
                         <Route path="*" element={<NotFound />} />

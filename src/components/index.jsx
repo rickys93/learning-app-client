@@ -4,4 +4,6 @@ export { default as CategoryList } from "./CategoryList";
 export { default as Popup } from "./Popup";
 export {default as QuizCard} from "./QuizCard"
 export {default as Answers} from "./Answers"
+export { default as Login } from "./Login";
+export { default as Signup } from "./Signup";
 

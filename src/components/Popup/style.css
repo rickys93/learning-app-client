@@ -11,10 +11,17 @@
     align-content: center;
 }
 
-.popup-content {
-    width: 400px;
+.popup-container {
+    width: 80%;
+    max-width: 400px;
     height: 400px;
     background-color: white;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .close-button {

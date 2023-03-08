@@ -9,14 +9,16 @@ function Popup({isOpen, setIsOpen, content}) {
 
     return isOpen ? (
         <div className='popup'>
-            <div className='popup-content'>
+            <div className='popup-container'>
                 <button
                     className='close-button'
                     onClick={closePopup}
                 >
                     X
                 </button>
-                {content}
+                <div className="popup-content">
+                    {content}
+                </div>
             </div>
         </div>
     ) : null
