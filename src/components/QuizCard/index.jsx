@@ -2,39 +2,13 @@ import React, {useEffect, useState} from 'react'
 import Answers from '../Answers'
 import { useNavigate } from 'react-router-dom'
 
-export default function QuizzCard({id, limit}) {
-    const [flashcards, setFlashcards] = useState([])
+export default function QuizCard({flashcards, length, loading, amount, next, setNext, selected, setSelected}) {
     const [flip, setFlip] = useState(false)
-    const [next, setNext] = useState(0)
-    const [length, setLength] = useState()
-    const [loading, setLoading] = useState(true);
+    
     const [score, setScore]= useState(0)
-    const [selected, setSelected] = useState()
+    
     const counter = next+1
     let navigate= useNavigate()
-
-    useEffect(() => {
-
-    
-        async function loadCards() {
-            
-
-            const response = await fetch(`http://localhost:3000/questions/categories/${id}?limit=${limit}`);
-            console.log('response', response)
-            const data = await response.json();
-            
-            const shuffled = data.sort(()=> 0.5 - Math.random())
-            setLength(shuffled.length)
-            setFlashcards(shuffled);
-            console.log(flashcards)
-            setNext(0)
-            setSelected()
-            setLoading(false);
-        };
-
-        loadCards();
-
-    }, [id])
 
     const handleNext = () => {
         setNext(prev => prev +1)
@@ -63,7 +37,7 @@ export default function QuizzCard({id, limit}) {
                 </div>
                 <div className='button_container'>
                     <button className='prev_btn' onClick={handleQuit}>Quit</button>
-                    <button className='next_btn' disabled= {next===limit ?  true: false }  onClick={handleNext}>Next</button>
+                    <button className='next_btn' disabled= {next===amount ?  true: false }  onClick={handleNext}>Next</button>
                 </div>
         
             </>
