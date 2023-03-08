@@ -1,5 +1,4 @@
 .categories-list {
-
     display: flex;
     flex-wrap: wrap;
 }
@@ -9,33 +8,32 @@
 .category-box {
     border: 1px solid gray;
     padding: 10px;
-    margin: 20px;
+    margin: 25px;
     float: left;
     width: 25%;
     text-align: center;
     min-width: 200px;
 }
-.category-box a{
+.category-box a {
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
-.choice-box{
+.choice-box {
     display: flex;
     justify-content: space-between;
 }
 @media (max-width: 800px) {
+    .category-box p {
+        display: none;
+    }
 
-.category-box p {
-    display: none;
-}
-
-.category-box{
-    margin: 5px;
-}
-.category-box h3{
-    margin: 0;
-}
+    .category-box {
+        margin: 5px;
+    }
+    .category-box h3 {
+        margin: 0;
+    }
 }
 
 .add-category-button {

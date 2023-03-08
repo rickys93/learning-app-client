@@ -1,57 +1,63 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { NewCategoryForm } from '../../components'
+import { NewCategoryForm, Category } from '../../components'
 import { UserContext, PopupContext } from "../../App";
 import { NewFlashcard } from "../../pages";
 
 import "./style.css";
 
 export default function CategoryList({categories, setMyCategories, defaultCategories}) {
-  const {user, setUser} = useContext(UserContext)
-  const { setPopupContent, closePopup, openPopup } = useContext(PopupContext)
+    const {user, setUser} = useContext(UserContext)
+    const { openPopup } = useContext(PopupContext)
 
-  const openAddNewCategory = () => {
-    openPopup(<NewCategoryForm myCategories={categories} setMyCategories={setMyCategories}/>)
-  }
+    const openAddNewCategory = () => {
+        openPopup(<NewCategoryForm myCategories={categories} setMyCategories={setMyCategories}/>)
+    }
 
-  return (
-    <div className="categories-list">
-      {categories.map((category) => 
-        
-        <div
-          key={category.id}
-          // to={`/quiz/${category.id}`}
-          className="category-box"
-        >
-          <h3>{category.name}</h3>
-          <p>{category.description}</p>
-          <div className="choice-box">
-          <Link to={`/flashcards/${category.id}`}>Learn</Link>
-          <Link to={`/quiz/${category.id}`}>Quiz</Link>
-          {!defaultCategories ? (
-            <button>Delete</button>
-          ): null}
-          </div>
-          
-        </div>)
+    const handleDeleteButton = async (id) => {
+        const options = {
+        method:"DELETE"
         }
-      
-      {!defaultCategories ? (
-        <div className="category-box">
-          <button
-            className="add-category-button"
-            onClick={openAddNewCategory}
-          >
-            +
-          </button>
-        </div>
-      ) : null}
+        const response = await fetch(`http://localhost:3000/categories/${id}`, options)
+        console.log('response', response)
+        if (response.status === 204) {
+        const updatedMyCategories = categories.filter(category => category.id !== id)
+        setMyCategories(updatedMyCategories)
+        }
 
-      
-    </div>
-  
-)
+    }
+        
+    const clickCategory = (id) => {
+        // add get full event details here
+        const categoryData = categories.filter(cat => cat.id === id)[0]
+        openPopup(<Category categoryData={categoryData} handleDeleteButton={handleDeleteButton}/>)
+        }
+
+    return (
+        <div className="categories-list">
+        {categories.map((category) => (
+            <div
+            key={category.id}
+            onClick={() => clickCategory(category.id)}
+            className="category-box"
+            >
+            <h3>{category.name}</h3>
+            <p>{category.description}</p>
+            </div>
+        ))}
+        {!defaultCategories ? (
+            <div className="category-box">
+            <button
+                className="add-category-button"
+                onClick={openAddNewCategory}
+            >
+                +
+            </button>
+            </div>
+        ) : null}
+        </div>
+    );
 }
 
 // import React from "react";

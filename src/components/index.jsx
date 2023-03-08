@@ -6,7 +6,7 @@ export { default as QuizCard } from "./QuizCard";
 export { default as Answers } from "./Answers";
 export { default as Login } from "./Login";
 export { default as Signup } from "./Signup";
-
+export { default as Category } from "./Category";
 export { default as NewFlashcardForm } from "./NewFlashcardForm";
 export { default as NewCategoryForm } from "./NewCategoryForm";
 export { default as FormComplete } from "./FormComplete";
