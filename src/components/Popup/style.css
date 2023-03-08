@@ -5,4 +5,22 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.popup-content {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}
+
+.close-button {
+    background-color: #cccccc00;
+    color: #2d2d2d;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
 }

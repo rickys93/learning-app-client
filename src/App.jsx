@@ -12,18 +12,18 @@ export const PopupContext = createContext(null)
 
 export default function App() {
     const [user, setUser] = useState({})
-    const [isOpen, setIsOpen] = useState(false)
-    const [popupContent, setPopupContent] = useState(null);
+    const [isOpen, setIsOpen] = useState(true)
+    const [popupContent, setPopupContent] = useState("hello");
     const contextValue = {
         user, setUser
     }
 
-    openPopup = (content) => {
+    const openPopup = (content) => {
         setPopupContent(content)
         setIsOpen(true)
     }
 
-    closePopup = () => {
+    const closePopup = () => {
         setPopupContent(null)
         setIsOpen(false)
     }
@@ -53,18 +53,20 @@ export default function App() {
   return (
         <PopupContext.Provider value={{ openPopup, closePopup }}>
         <UserContext.Provider value={contextValue}>
-        <Routes>
-            <Popup isOpen={isOpen} content={popupContent}/>
-            <Route path="/" element={<NavBar user={user} />}>
-                <Route index element={<LandingPage />} />
-                <Route path="categories" element={<Categories />} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/signup" element={<Signup/>} />
-                <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
-                <Route path="/quiz/:categoryId" element={<QuizPage />} />
-                <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
+            <div className="App">
+                <Popup isOpen={isOpen} setIsOpen={setIsOpen} content={popupContent}/>
+                <Routes>
+                    <Route path="/" element={<NavBar user={user} />}>
+                        <Route index element={<LandingPage />} />
+                        <Route path="categories" element={<Categories />} />
+                        <Route path="/login" element={<Login/>} />
+                        <Route path="/signup" element={<Signup/>} />
+                        <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
+                        <Route path="/quiz/:categoryId" element={<QuizPage />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Route>
+                </Routes>
+            </div>
           </UserContext.Provider>
           </PopupContext.Provider>
       
