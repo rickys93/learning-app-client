@@ -11,12 +11,8 @@ export default function Categories() {
 
   useEffect(() => {
     async function loadCategories() {
-      const options = {
-        headers: {
-          "user-id": user.id,
-        },
-      };
-      const response = await fetch("http://localhost:3000/categories", options);
+      const id = user.id ? user.id : "" 
+      const response = await fetch(`http://localhost:3000/categories?user_id=${id}`);
       console.log('response', response)
       const data = await response.json();
       setCategories(data);

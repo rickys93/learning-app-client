@@ -1,16 +1,23 @@
 import React, { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { UserContext } from "../../App";
+import { UserContext, PopupContext } from "../../App";
+
+import { Login } from "..";
 
 
 export default function Account() {
     const {user, setUser} = useContext(UserContext)
+    const { setPopupContent, closePopup } = useContext(PopupContext)
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [signUpEmail, setSignUpEmail] = useState("");
     const [signUpPassword, setSignUpPassword] = useState("");
 
     const navigate = useNavigate()
+
+    const switchToLogin = () => {
+        setPopupContent(<Login/>)
+    }
    
     const handleSignup = async (e) => {
         // Handles the sign-in/sign-up input logic
@@ -34,6 +41,7 @@ export default function Account() {
             // now set user details to user and navigate to main page 
             setUser(data.user)
             localStorage.setItem("token", user.token)
+            closePopup()
             navigate("/")
         }
         
@@ -105,6 +113,7 @@ export default function Account() {
                             />
                             <button type="submit">Sign Up</button>
                         </form>
+                        <div>Already have an account? <button onClick={switchToLogin}>Log in here!</button></div>
                     </div>
                 </div>
             </div>
