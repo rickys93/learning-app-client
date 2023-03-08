@@ -18,12 +18,12 @@ export default function App() {
         user, setUser
     }
 
-    openPopup = (content) => {
+    const openPopup = (content) => {
         setPopupContent(content)
         setIsOpen(true)
     }
 
-    closePopup = () => {
+    const closePopup = () => {
         setPopupContent(null)
         setIsOpen(false)
     }
@@ -51,11 +51,11 @@ export default function App() {
     }, [])
   
   return (
-        <PopupContext.Provider value={{ openPopup, closePopup }}>
+        // <PopupContext.Provider value={{ openPopup, closePopup }}>
         <UserContext.Provider value={contextValue}>
         <Routes>
-            <Popup isOpen={isOpen} content={popupContent}/>
             <Route path="/" element={<NavBar user={user} />}>
+                {/* <Popup isOpen={isOpen} content={popupContent}/> */}
                 <Route index element={<LandingPage />} />
                 <Route path="categories" element={<Categories />} />
                 <Route path="/login" element={<Login/>} />
@@ -66,7 +66,7 @@ export default function App() {
             </Route>
           </Routes>
           </UserContext.Provider>
-          </PopupContext.Provider>
+        //   </PopupContext.Provider>
       
       
   );
