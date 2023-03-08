@@ -17,7 +17,8 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
 
   return (
     <div className="categories-list">
-      {categories.map((category) => (
+      {categories.map((category) => 
+        
         <div
           key={category.id}
           // to={`/quiz/${category.id}`}
@@ -31,8 +32,11 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
           {!defaultCategories ? (
             <button>Delete</button>
           ): null}
-        </div>
-      ))}
+          </div>
+          
+        </div>)
+        }
+      
       {!defaultCategories ? (
         <div className="category-box">
           <button
@@ -43,8 +47,11 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
           </button>
         </div>
       ) : null}
+
+      
     </div>
-  );
+  
+)
 }
 
 // import React from "react";
