@@ -60,6 +60,7 @@ export default function Account() {
                                     value={firstName}
                                     onChange={(e) => setFirstName(e.target.value)}
                                     placeholder={"Enter First Name"}
+                                    required
                                 />
                                 <label 
                                     htmlFor="last-name" 
@@ -72,6 +73,7 @@ export default function Account() {
                                     value={lastName}
                                     onChange={(e) => setLastName(e.target.value)}
                                     placeholder={"Enter Last Name"}
+                                    required
                                 />
                             </div>
 
@@ -86,6 +88,7 @@ export default function Account() {
                                 value={signUpEmail}
                                 onChange={(e) => setSignUpEmail(e.target.value)}
                                 placeholder={"Enter Email"}
+                                required
                             />
                             <label 
                                 htmlFor="sign-up-password" 
@@ -98,6 +101,7 @@ export default function Account() {
                                 value={signUpPassword}
                                 onChange={(e) => setSignUpPassword(e.target.value)}
                                 placeholder={"Enter Password"}
+                                required
                             />
                             <button type="submit">Sign Up</button>
                         </form>
