@@ -25,7 +25,8 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
         >
           <h3>{category.name}</h3>
           <p>{category.description}</p>
-          <Link to={`/flashcards/${category.id}`}>Flashcards</Link>
+          <div className="choice-box">
+          <Link to={`/flashcards/${category.id}`}>Learn</Link>
           <Link to={`/quiz/${category.id}`}>Quiz</Link>
           {!defaultCategories ? (
             <button>Delete</button>
