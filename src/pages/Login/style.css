@@ -10,16 +10,17 @@
 .acc-form {
     background-color: white;
     margin-top: 50px;
-    height: 300px;
-    width: 100%;
-    max-width: 300px;
-    padding: 50px 10px;
+    height: 230px;
+    width: 90%;
+    max-width: 200px;
+    padding: 20px 10px;
     border-radius: 10px;
 }
 
 .acc-form form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .acc-form form input,
