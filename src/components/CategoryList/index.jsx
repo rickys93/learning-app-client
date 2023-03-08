@@ -7,7 +7,7 @@ export default function CategoryList(props) {
   const { categories } = props;
   return (
     <div className="categories-list">
-      <Link to={"./NewFlashCard"}>Create New Question</Link>
+      <Link to={"/NewFlashcard"}>Create New Question</Link>
       {categories.map((category) => (
         <div
           key={category.id}
