@@ -20,8 +20,8 @@ export default function NavBar() {
         </div>
         <nav className="navlinks"  id={mobile? "hidden" : ""}>
           <ul>
-          <li><NavLink to="/" className="a">Home</NavLink></li>
-          <li><NavLink to="/categories" className="a">Categories</NavLink></li>
+          <li onClick={()=>mobile? setMobile(!mobile): mobile}><NavLink to="/" className="a">Home</NavLink></li>
+          <li onClick={()=>mobile? setMobile(!mobile): mobile}><NavLink to="/categories" className="a">Categories</NavLink></li>
         
           </ul>
         </nav>

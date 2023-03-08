@@ -28,7 +28,7 @@ export default function Categories() {
 
   return (
     <>
-      <h2>Categories</h2>
+      <h2 className="cat-h2">Subjects</h2>
       {/* <button>
         <Link to={"./NewFlashcard"}></Link> New
       </button> */}
@@ -36,7 +36,7 @@ export default function Categories() {
       {
         Object.keys(user).length ? (
           <>
-            <h2>My Categories</h2>
+            <h2 className="cat-h2">My Categories</h2>
             <CategoryList categories={myCategories} setMyCategories={setMyCategories} defaultCategories={false} />
           </>
         ) : null
