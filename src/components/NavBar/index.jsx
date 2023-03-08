@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 import UserAccount from "../UserAccount";
 
-import './style.css'
+import "./style.css";
 
 export default function NavBar() {
 
