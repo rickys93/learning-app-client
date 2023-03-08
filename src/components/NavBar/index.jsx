@@ -22,8 +22,7 @@ export default function NavBar() {
           <ul>
           <li><NavLink to="/" className="a">Home</NavLink></li>
           <li><NavLink to="/categories" className="a">Categories</NavLink></li>
-          <li><NavLink to="/flashcards" className="a">Memorize</NavLink></li>
-          <li><NavLink to="/quiz" className="a">Quiz</NavLink></li>
+        
           </ul>
         </nav>
         </div>

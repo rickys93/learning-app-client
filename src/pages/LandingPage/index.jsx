@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
   return (
     <main className="intro-main">
+      <div className="intro-box">
       <div className="intro-div">
         <h1 className="h1-lp">Welcome to the Quiz App</h1>
         <p className="intro">
@@ -19,6 +20,7 @@ export default function LandingPage() {
       <button>
         <Link to="/categories">Explore Categories</Link>
       </button>
+      </div>
     </main>
   );
 }

@@ -1,16 +1,21 @@
 .main{
     display: flex;
+    justify-content: space-between;
+    min-width: 240px;
 }
 
 .login{
     display: flex;
     align-items: center;
     align-self: flex-start;
+    flex: 1;
+    justify-content: flex-end;
 }
 .navbar {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     position: relative;
+    min-width: 50px;
     justify-content: space-between;
     align-items: center;
     /* background-color: #333; */
@@ -40,6 +45,7 @@
     text-decoration: none;
     color: rgb(41, 40, 40);
     padding: 1rem;
+    z-index: 1;
 }
 
 .navlinks li .a:hover {
@@ -48,7 +54,7 @@
 
 .toggle-button {
     position: absolute;
-    top: 1.1rem;
+   
     left: 1rem;
     display: none;
     flex-direction: column;
@@ -68,12 +74,13 @@
     .navbar #hidden{
         flex-direction: column;
         justify-content: center;
-        left: 0px;
+        left: -9px;
         top:40px;
-        height: 230px;
-        width: 100%;
+        height: 120px;
+        width: 100px;
         align-items: flex-start;
         background-color: aliceblue;
+        position: absolute;
     }
 
     .toggle-button {
@@ -94,8 +101,9 @@
         text-align: center;
         list-style: none;
     }
-    .navlinks ul li:hover {
+     .a:hover {
        background-color: #f79022;
+       
     }
 
     .a {
