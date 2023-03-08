@@ -2,14 +2,10 @@
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    justify-content: center;
-=======
     color: #7fffd4;
     width: 58%;
     margin-left: 400px;
     margin-top: 30px;
->>>>>>> local
 }
 #root {
     text-align: center;
