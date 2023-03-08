@@ -47,10 +47,11 @@
     color: rgb(41, 40, 40);
     padding: 1rem;
     z-index: 1;
+    background-color: white;
 }
 
 .navlinks li .a:hover {
-    color: #f79022;
+    color: white;
 }
 
 .toggle-button {
@@ -103,7 +104,7 @@
         list-style: none;
     }
      .a:hover {
-       background-color: #f79022;
+       background-color: white;
        
     }
 
@@ -115,3 +116,34 @@
         display: flex;
     }
 }
+ul{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  .menu{
+    display: flex;
+  }
+  .menu a{
+    height: 40px;
+    margin: 10px;
+    line-height: 43px;
+    padding: 0 40px;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: aquamarine;
+    background-color: #3C1B43;
+    border-radius: 5px;
+  }
+  .menu a:hover{
+    color: #fff;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                inset 0px 4px 8px rgba(0,255,255,0.3), 
+                inset 0px 8px 16px rgba(0,255,255,0.3);
+    transition: 0.2s;
+    transform: translateY(2px);
+  }
