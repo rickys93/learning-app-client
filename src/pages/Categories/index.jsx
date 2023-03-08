@@ -17,6 +17,7 @@ export default function Categories() {
         }
       }
       const response = await fetch("http://localhost:3000/categories", options);
+      console.log('response', response)
       const data = await response.json();
       setCategories(data);
     }

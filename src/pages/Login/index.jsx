@@ -4,8 +4,6 @@ import { UserContext } from "../../App";
 
 import './style.css'
 
-
-
 export default function Account() {
     const {user, setUser} = useContext(UserContext)
     const [loginEmail, setloginEmail] = useState("");
@@ -56,6 +54,7 @@ export default function Account() {
                                 value={loginEmail}
                                 onChange={(e) => setloginEmail(e.target.value)}
                                 placeholder={"Enter Email"}
+                                required
                             />
 
                             <label 
@@ -69,6 +68,7 @@ export default function Account() {
                                 value={loginPassword}
                                 onChange={(e) => setloginPassword(e.target.value)}
                                 placeholder={"Enter Password"}
+                                required
                             />
                             <button 
                                 type="submit">
