@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import'./style.css'
+import "./style.css";
 
 export default function CategoryList(props) {
   const { categories } = props;
   return (
     <div className="categories-list">
+      <Link to={"./NewFlashCard"}>Create New Question</Link>
       {categories.map((category) => (
         <div
           key={category.id}
-          to={`/Quiz/${category.id}`}
+          // to={`/quiz/${category.id}`}
           className="category-box"
         >
           <h3>{category.name}</h3>
