@@ -6,10 +6,16 @@
 .category-box {
     border: 1px solid gray;
     padding: 10px;
-    margin: 20px;
+    margin: 25px;
     float: left;
     width: 25%;
     text-align: center;
+    background-color: white;
+}
+
+.category-box:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
 }
 
 .add-category-button {
