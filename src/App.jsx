@@ -2,16 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { NavBar, Popup } from "./components";
 
-import {
-  NotFound,
-  LandingPage,
-  FlashcardPage,
-  Categories,
-  Login,
-  Signup,
-  QuizPage,
-  NewFlashcard,
-} from "./pages";
+import {NotFound, LandingPage, FlashcardPage, Categories, QuizPage, NewFlashcard} from "./pages";
 
 import "./index.css";
 
@@ -63,22 +54,23 @@ export default function App() {
   }, []);
 
   return (
-    // <PopupContext.Provider value={{ openPopup, closePopup }}>
-    <UserContext.Provider value={contextValue}>
-      <Routes>
-        <Route path="/" element={<NavBar user={user} />}>
-          {/* <Popup isOpen={isOpen} content={popupContent}/> */}
-          <Route index element={<LandingPage />} />
-          <Route path="categories" element={<Categories />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
-          <Route path="/quiz/:categoryId" element={<QuizPage />} />
-          <Route path="NewFlashcard" element={<NewFlashcard />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </UserContext.Provider>
-    //   </PopupContext.Provider>
+        <PopupContext.Provider value={{ openPopup, closePopup, setPopupContent }}>
+        <UserContext.Provider value={contextValue}>
+            <div className="App">
+                <Popup isOpen={isOpen} setIsOpen={setIsOpen} content={popupContent}/>
+                <Routes>
+                    <Route path="/" element={<NavBar user={user} />}>
+                        <Route index element={<LandingPage />} />
+                        <Route path="categories" element={<Categories />} />
+                        <Route path="/flashcards/:categoryId" element={<FlashcardPage />} />
+                        <Route path="/quiz/:categoryId" element={<QuizPage />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Route>
+                </Routes>
+            </div>
+          </UserContext.Provider>
+          </PopupContext.Provider>
+      
+      
   );
 }
