@@ -28,6 +28,7 @@ export default function NavBar() {
                   Categories
                 </NavLink>
               </li>
+              <div className="logo">Crammer UK</div>
             </ul>
           </nav>
         </div>

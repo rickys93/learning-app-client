@@ -147,3 +147,8 @@ ul{
     transition: 0.2s;
     transform: translateY(2px);
   }
+.logo{
+    font-size: 40px;
+    margin-left: 350px;
+    margin-top: 5px;
+}
