@@ -1,0 +1,10 @@
+.category-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.category-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CategoryForm } from "../../components";
+import { NewFlashcardForm } from "../../components";
 
 export default function NewFlashcard() {
   const [category, setCategory] = useState("");
@@ -12,7 +12,7 @@ export default function NewFlashcard() {
   return (
     <main>
       <h1>Add New Question</h1>
-      <CategoryForm
+      <NewFlashcardForm
         category={category}
         setCategory={setCategory}
         question={question}

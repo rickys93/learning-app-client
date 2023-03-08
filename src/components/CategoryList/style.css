@@ -11,3 +11,11 @@
     width: 25%;
     text-align: center;
 }
+
+.add-category-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    font-size: xx-large;
+    cursor: pointer;
+}
