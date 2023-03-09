@@ -51,7 +51,7 @@ export default function Account() {
         <main className="login-container">
             <div className="acc-form">
                 <div className="tab-content">
-                    <div className={`signup`}>
+                    <div className={`signup-form`}>
                         <h2>Sign Up</h2>
                         <form
                             onSubmit={handleSignup}
@@ -111,9 +111,17 @@ export default function Account() {
                                 placeholder={"Enter Password"}
                                 required
                             />
-                            <button type="submit">Sign Up</button>
+                            <button 
+                                type="submit"
+                                className="button-colours"
+                            >Sign Up</button>
                         </form>
-                        <div>Already have an account? <button onClick={switchToLogin}>Log in here!</button></div>
+                        <div className="login-signup-navigater">Already have an account?<br/><span 
+                                onClick={switchToLogin}
+                                className="signuploginhere"
+                            >Log in here!
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

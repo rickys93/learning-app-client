@@ -8,26 +8,32 @@
 }
 
 .acc-form {
-    background-color: white;
-    margin-top: 50px;
     height: 230px;
     width: 90%;
-    max-width: 200px;
+    max-width: 300px;
     padding: 20px 10px;
     border-radius: 10px;
+}
+
+.acc-form h2 {
+    color: #3c1b43;
 }
 
 .acc-form form {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
-.acc-form form input,
-button {
+.acc-form form input {
     padding: 5px;
     font-size: 15px;
     margin: 5px 0;
+    border: solid black 0.5px;
+    border-radius: 5px;
+}
+
+.login-button {
+    width: 100px;
 }
 
 .name-inputs {
@@ -36,39 +42,6 @@ button {
 
 .name-inputs input {
     width: 50%;
-}
-
-.tab-group {
-    margin: 0;
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.tab-group li {
-    list-style: none;
-}
-
-.tab-group a {
-    cursor: pointer;
-    padding: 15px;
-}
-
-.tab-group a:hover {
-    opacity: 0.8;
-}
-
-.tab-content h2 {
-    text-align: center;
-}
-
-.tab {
-    background-color: rgb(224, 224, 224);
-}
-
-.tab.active {
-    background-color: rgb(255, 127, 127);
 }
 
 .visually-hidden {
@@ -81,4 +54,17 @@ button {
     clip: rect(0 0 0 0);
     white-space: nowrap;
     border: 0;
+}
+
+.signuploginhere {
+    text-decoration: underline;
+}
+
+.signuploginhere:hover {
+    cursor: pointer;
+    color: #3c1b43d4;
+}
+.login-signup-navigater {
+    font-weight: 600;
+    font-size: large;
 }

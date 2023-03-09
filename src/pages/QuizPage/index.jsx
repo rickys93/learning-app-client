@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { QuizCard } from '../../components'
 // import "./flashcard.css"
 
 export default function QuizPage() {
+    const navigate = useNavigate()
     const { categoryId } = useParams()
     const [name, setName]= useState()
     const [amount, setAmount] = useState()
@@ -53,12 +54,16 @@ export default function QuizPage() {
 
     return (
         <>
+            <div className='form-group'>
+            <h2 className='game-title'>
+                <button
+                    className='go-back-button'
+                    onClick={() => navigate(-1)}
+                >&#8592;</button>
+                {name} Quiz
+            </h2>
+            </div>
             <form className='header'>
-                <div className='form-group'>
-                    <h2>{name}</h2>
-                    
-                    
-                </div>
                 <div className='form-group'>
                     <label htmlFor = 'amount'>Number of Questions</label>
                     <input type = "number" id = "amount" min = "1" step = "1" defaultValue = {10} ref={amountEl}></input>

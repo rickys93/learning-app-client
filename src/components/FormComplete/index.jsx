@@ -1,8 +1,9 @@
 import React from 'react'
+import './style.css'
 
 function FormComplete({formName}) {
   return (
-    <div>
+    <div className='form-complete'>
         <h2>{formName} added successfully!</h2>
     </div>
   )

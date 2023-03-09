@@ -47,10 +47,12 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
             </div>
         ))}
         {!defaultCategories ? (
-            <div className="category-box">
+            <div 
+                className="category-box"
+                onClick={openAddNewCategory}
+            >
             <button
                 className="add-category-button"
-                onClick={openAddNewCategory}
             >
                 +
             </button>

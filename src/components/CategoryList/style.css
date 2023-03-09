@@ -1,25 +1,42 @@
+.categories-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .categories-list {
     display: flex;
     flex-wrap: wrap;
+    color: #7fffd4;
+    width: 60%;
+    margin-top: 30px;
     justify-content: center;
-}
-#root {
-    text-align: center;
 }
 
 .category-box {
     border: 1px solid gray;
     padding: 10px;
-    margin: 25px;
-    float: left;
-    width: 25%;
+    margin: 15px;
+    box-shadow: 3px 3px 5px 3px aquamarine;
+    width: 40%;
     text-align: center;
-    min-width: 250px;
+    /* width: fit-content; */
+}
+.category-box {
+    line-height: 43px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 .category-box:hover {
-    cursor: pointer;
-    background-color: aliceblue;
+    color: #fff;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0, 255, 255, 0.3),
+        inset 0px 4px 8px rgba(0, 255, 255, 0.3),
+        inset 0px 8px 16px rgba(0, 255, 255, 0.3);
+    transition: 0.2s;
+    transform: translateY(2px);
 }
 
 .category-box a {
@@ -43,7 +60,7 @@
         margin: 0;
     }
 }
-.cat-h2{
+.cat-h2 {
     margin: 20px;
 }
 .add-category-button {
@@ -52,4 +69,13 @@
     border-radius: 80px;
     font-size: xx-large;
     cursor: pointer;
+    border: none;
+    color: aquamarine;
+    background-color: #3c1b4300;
+}
+
+h2 {
+    color: aquamarine;
+    margin-top: 15px;
+    font-size: 30px;
 }
