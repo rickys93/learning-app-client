@@ -8,14 +8,14 @@ export default function NavBar() {
   const [mobile, setMobile] = useState(false);
   return (
     <>
-      <header className="main">
+      <nav className="main">
         <div className="navbar">
           <div className="toggle-button" onClick={() => setMobile(!mobile)}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
           </div>
-          <nav className="navlinks" id={mobile ? "hidden" : ""}>
+          <div className="navlinks" id={mobile ? "hidden" : ""}>
             <ul>
               <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
                 <NavLink to="/" className="a-c">
@@ -29,12 +29,12 @@ export default function NavBar() {
               </li>
               <DarkMode />
             </ul>
-          </nav>
+          </div>
         </div>
         <div className="login">
           <UserAccount />
         </div>
-      </header>
+      </nav>
       <Outlet />
     </>
   );
