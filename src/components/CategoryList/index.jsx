@@ -53,8 +53,7 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
             >
             <button
                 className="add-category-button"
-            >
-                +
+            ><div className="plus">+</div>
             </button>
             </div>
         ) : null}

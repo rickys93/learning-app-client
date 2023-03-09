@@ -34,7 +34,7 @@
 }
 #category, #amount{
     background-color: white;
-    width:120px;
+    width:130px;
     border: solid 1px gray;
     height: 20px;
     border-radius: 4px;
@@ -55,7 +55,8 @@
     backface-visibility: hidden;
     background-color: aquamarine;
     text-align: center;
-    font-size: calc(15px + 0.5vw);
+    font-size: calc(13px + 0.5vw);
+    width: 98%;
 }
 
 .card  .back,
@@ -70,11 +71,12 @@
     
 }
 .counter{
-    top: 10px;
+    top: 5px;
     color: black;
     position: fixed;
     left: 15px;
     background: none;
+    font-size: calc(11px + 0.5vw);
 }
 .next_btn , .prev_btn {
     background-color:  #3C1B43;

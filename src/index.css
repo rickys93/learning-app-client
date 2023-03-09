@@ -48,3 +48,16 @@ body {
 .go-back-button:hover {
     cursor: pointer;
 }
+@media (max-width: 800px) {
+    .go-back-button {
+        position: absolute;
+        left: 2px;
+        padding: 4px;
+        background-color:  #3c1b43;
+        border: aquamarine solid;
+        border-radius: 5px;
+        color: aquamarine;
+        width: 30px;
+    }
+
+}

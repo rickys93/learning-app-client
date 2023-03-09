@@ -27,7 +27,7 @@ export default function NavBar() {
                   Categories
                 </NavLink>
               </li>
-              <DarkMode />
+              <li className="a"><DarkMode /></li>
             </ul>
           </nav>
         </div>
