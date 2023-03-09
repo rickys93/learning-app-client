@@ -10,4 +10,4 @@ export { default as Category } from "./Category";
 export { default as NewFlashcardForm } from "./NewFlashcardForm";
 export { default as NewCategoryForm } from "./NewCategoryForm";
 export { default as FormComplete } from "./FormComplete";
-
+export { default as DarkMode } from "./DarkMode";

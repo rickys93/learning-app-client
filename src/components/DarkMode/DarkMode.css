@@ -1,0 +1,9 @@
+body.dark-mode {
+    background-color: #3C1B43;
+}
+.theme{
+    display: flex;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: -15px;
+}
