@@ -9,7 +9,6 @@ import {
   Categories,
   QuizPage,
   NewFlashcard,
-  AboutPage,
 } from "./pages";
 
 import "./index.css";

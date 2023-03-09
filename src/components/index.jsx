@@ -11,4 +11,3 @@ export { default as NewFlashcardForm } from "./NewFlashcardForm";
 export { default as NewCategoryForm } from "./NewCategoryForm";
 export { default as FormComplete } from "./FormComplete";
 export { default as DarkMode } from "./DarkMode";
-export { default as AboutPage1 } from "./AboutPage1";

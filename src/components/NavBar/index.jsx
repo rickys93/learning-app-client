@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import UserAccount from "../UserAccount";
 import DarkMode from "../DarkMode";
-import AboutPage1 from "../AboutPage1";
-import { AboutPage } from "../../pages";
 import "./style.css";
 
 export default function NavBar() {
@@ -30,9 +28,7 @@ export default function NavBar() {
                 </NavLink>
               </li>
               <li>
-                <button to={<AboutPage1 />}>AboutPage</button>
-                {/* <AboutPage /> */}
-                {/* <NavLink className="a">About us</NavLink> */}
+                <NavLink className="a">About us</NavLink>
               </li>
               <DarkMode />
             </ul>
