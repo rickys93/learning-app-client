@@ -27,7 +27,12 @@ export default function NavBar() {
                   Categories
                 </NavLink>
               </li>
-              <li className="a"><DarkMode /></li>
+              <li>
+                <NavLink to="/about" className="a">
+                  About us
+                </NavLink>
+              </li >
+             <li className="a"> <DarkMode /></li>
             </ul>
           </div>
         </div>
