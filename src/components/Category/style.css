@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
 }
+.category-container h2 {
+    color: #3c1b43;
+    margin-bottom: 20px;
+}
 
 .category-container a {
     padding: 10px;
@@ -12,4 +16,12 @@
 
 .category-container div {
     margin-bottom: 20px;
+}
+
+.game-button-container {
+    display: flex;
+}
+
+.game-button-container button {
+    margin: 5px;
 }

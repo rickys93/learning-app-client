@@ -8,21 +8,21 @@ export default function FlashcardPage() {
   const { categoryId } = useParams()
   const [amount, setAmount] = useState()
   const [cat , setCat] = useState(categoryId)
-const categoryEl = useRef()
-const amountEl = useRef()
-useEffect(()=>{
+  const categoryEl = useRef()
+  const amountEl = useRef()
+  useEffect(()=>{
 
- 
-  async function loadCategories() {
+  
+    async function loadCategories() {
 
-    const response = await fetch(`http://localhost:3000/categories`);
-    const data = await response.json();
-   console.log(data)
-    
-   setName(data.filter(c => c.id==cat)[0].name)
+      const response = await fetch(`http://localhost:3000/categories`);
+      const data = await response.json();
+    console.log(data)
+      
+    setName(data.filter(c => c.id==cat)[0].name)
 
-    
-};
+      
+  };
 
 loadCategories();
 

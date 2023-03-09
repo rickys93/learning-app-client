@@ -12,9 +12,6 @@
     margin-top: 30px;
     justify-content: center;
 }
-#root {
-    text-align: center;
-}
 
 .category-box {
     border: 1px solid gray;
@@ -72,7 +69,11 @@
     border-radius: 80px;
     font-size: xx-large;
     cursor: pointer;
+    border: none;
+    color: aquamarine;
+    background-color: #3c1b4300;
 }
+
 h2 {
     color: aquamarine;
     margin-top: 15px;

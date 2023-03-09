@@ -61,7 +61,7 @@ function NewCategoryForm({myCategories, setMyCategories}) {
                         required
                     />
                 </label>
-                <label for="desciption">Description:
+                <label htmlFor="desciption">Description:
                     <textarea 
                         id="desciption" 
                         name="desciption" 
@@ -72,7 +72,10 @@ function NewCategoryForm({myCategories, setMyCategories}) {
                         required
                     />
                 </label>
-                <button type="submit">Add</button>
+                <button 
+                    type="submit"
+                    className='button-colours'
+                >Add</button>
             </form>
         </div>
     )

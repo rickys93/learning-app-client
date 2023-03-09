@@ -47,7 +47,7 @@ export default function Login() {
     return (
             <div className="acc-form">
                 <div className="tab-content">
-                    <div className={`login`}>
+                    <div className={`login-form`}>
                         <form onSubmit={handlelogin}>
                             <h2>Log In</h2>
                             <label 
@@ -78,11 +78,17 @@ export default function Login() {
                                 required
                             />
                             <button 
+                                className="button-colours"
                                 type="submit">
                                     Log In
                             </button>
                         </form>
-                        <div>New? <button onClick={switchToSignup}>Sign up here!</button></div>
+                        <div>New? 
+                            <span 
+                                onClick={switchToSignup}
+                                className="signuploginhere"
+                                
+                            > Sign up here!</span></div>
                     </div>
                 </div>
             </div>

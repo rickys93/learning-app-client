@@ -16,7 +16,8 @@
     width: 80%;
     max-width: 400px;
     height: 400px;
-    background-color: white;
+    background-color: aquamarine;
+    border-radius: 20px;
 }
 
 .popup-content {
@@ -26,6 +27,7 @@
 }
 
 .close-button {
+    margin-left: 10px;
     background-color: #cccccc00;
     color: #2d2d2d;
     padding: 5px;

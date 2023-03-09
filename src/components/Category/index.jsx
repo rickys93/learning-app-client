@@ -25,22 +25,26 @@ function Category({ categoryData, handleDeleteButton }) {
                 <div>
                     {categoryData.description}
                 </div>
-                <div>
+                <div className='game-button-container'>
                     <button
+                        className="button-colours"
                         onClick={() => handleLinkClick(`/flashcards/${categoryData.id}`)}
                     >Flashcards</button>
                     <button
+                        className="button-colours"
                         onClick={() => handleLinkClick(`/quiz/${categoryData.id}`)}
                     >Quizcards</button>
                 </div>
-                <div>
+                <div className='game-button-container'>
                     {categoryData.user_id ? (
                         <button
-                        onClick={() => handleDeleteButton(categoryData.id)}
+                            onClick={() => handleDeleteButton(categoryData.id)}
+                            className="button-colours"
                         >Delete
                         </button>
                     ): null}
                     <button
+                        className="button-colours"
                         onClick={handleAddNewQuestion}
                     >Add Custom Question</button>
                 </div>

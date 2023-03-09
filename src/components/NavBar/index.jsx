@@ -25,7 +25,7 @@ export default function NavBar() {
               </li>
               <li>
                 <NavLink to="/categories" className="a">
-                  Categories
+                  Subjects
                 </NavLink>
               </li>
             </ul>

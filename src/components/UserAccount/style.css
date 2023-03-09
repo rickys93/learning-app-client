@@ -28,7 +28,12 @@
     border: none;
     margin-left: 5px;
     min-width: 50px;
+    cursor: pointer;
 }
+.logout:hover {
+    background-color: antiquewhite;
+}
+
 .btn {
     display: flex;
     justify-content: flex-end;
