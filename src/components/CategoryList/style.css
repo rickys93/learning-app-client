@@ -82,4 +82,12 @@
     font-size: xx-large;
     cursor: pointer;
     padding-bottom: 5px;
+    padding: 0;
+}
+.add-category-button h3 {
+    color: black;
+}
+.plus{
+    position: relative;
+    top: -5px;
 }
