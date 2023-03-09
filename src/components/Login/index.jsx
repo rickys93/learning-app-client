@@ -83,12 +83,11 @@ export default function Login() {
                                     Log In
                             </button>
                         </form>
-                        <div>New? 
-                            <span 
+                        <div className="login-signup-navigater">New? <span 
                                 onClick={switchToSignup}
                                 className="signuploginhere"
                                 
-                            > Sign up here!</span></div>
+                            >Sign up here!</span></div>
                     </div>
                 </div>
             </div>

@@ -116,11 +116,10 @@ export default function Account() {
                                 className="button-colours"
                             >Sign Up</button>
                         </form>
-                        <div>Already have an account?  
-                            <span 
+                        <div className="login-signup-navigater">Already have an account?<br/><span 
                                 onClick={switchToLogin}
                                 className="signuploginhere"
-                            > Log in here!
+                            >Log in here!
                             </span>
                         </div>
                     </div>

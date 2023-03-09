@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Flashcard } from '../../components'
 import "./flashcard.css"
 
 export default function FlashcardPage() {
+  const navigate = useNavigate()
   const [name, setName]= useState()
   const { categoryId } = useParams()
   const [amount, setAmount] = useState()
@@ -39,10 +40,17 @@ console.log(cat)
 }
 
   return (
-    <> <div className='form-group'>
-    <h2>{name}</h2>
-    </div>
-    <form className='header' >
+    <> 
+      <div className='form-group'>
+        <h2 className='game-title'>
+          <button
+            className='go-back-button'
+            onClick={() => navigate(-1)}
+          >&#8592;</button>
+          {name} Flashcards
+        </h2>
+      </div>
+      <form className='header' >
      
       <div className='form-group'>
         <label htmlFor = 'amount'>Number of Questions</label>
