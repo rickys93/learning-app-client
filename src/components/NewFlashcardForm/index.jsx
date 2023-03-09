@@ -12,9 +12,9 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
   const [answer4, setAnswer4] = useState("");
   const [correctAnswer, setCorrectAnswer] = useState("");
 
-  function handleBackClick() {
-    setPopupContent(<Category categoryData={categoryData} handleDeleteButton={handleDeleteButton}/>)
-  }
+  // function handleBackClick() {
+  //   setPopupContent(<Category categoryData={categoryData} handleDeleteButton={handleDeleteButton}/>)
+  // }
 
   function handleAnswer1(e) {
     setAnswer1(e.target.value);
@@ -37,16 +37,16 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
 
   return (
     <div className="add-question-form">
-      <button
+      {/* <button
         onClick={handleBackClick}
-      >&#8592;</button>
+      >&#8592;</button> */}
       <h1>Add New Question</h1>
       <form action="">
         <div>
           <h3>Category: {categoryData.name}</h3>
-          <br />
+          
           <label htmlFor="question">
-            Enter Question:
+            Question:
             <input
               type="text"
               value={question}

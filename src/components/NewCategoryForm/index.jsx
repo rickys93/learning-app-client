@@ -72,10 +72,7 @@ function NewCategoryForm({myCategories, setMyCategories}) {
                         required
                     />
                 </label>
-                <button 
-                    type="submit"
-                    className='button-colours'
-                >Add</button>
+                <button type="submit" className='b'>Add</button>
             </form>
         </div>
     )

@@ -10,26 +10,18 @@ export default function NavBar() {
     <>
       <header className="main">
         <div className="navbar">
-          <div className="toggle-button" onClick={() => setMobile(!mobile)}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </div>
-          <nav className="navlinks" id={mobile ? "hidden" : ""}>
-            <ul className="menu">
-              <li onClick={()=>mobile? setMobile(!mobile): mobile} className="a">
-                <NavLink to="/" id="logo">
-                  Crammer UK.
-                </NavLink>
-              </li>
-              <li onClick={()=>mobile? setMobile(!mobile): mobile}>
-                <NavLink to="/categories" className="a">
-                  Subjects
-                </NavLink>
-              </li>
-              <DarkMode />
-            </ul>
-          </nav>
+        <div className="toggle-button" onClick={()=>setMobile(!mobile)}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <nav className="navlinks"  id={mobile? "hidden" : ""}>
+          <ul >
+          <li onClick={()=>mobile? setMobile(!mobile): mobile}><NavLink to="/" className="a-c">Crammer UK</NavLink></li>
+          <li onClick={()=>mobile? setMobile(!mobile): mobile}><NavLink to="/categories" className="a">Categories</NavLink></li>
+          <DarkMode />
+          </ul>
+        </nav>
         </div>
         <div className="login">
           <UserAccount />
