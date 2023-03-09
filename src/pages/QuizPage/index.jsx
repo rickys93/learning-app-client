@@ -53,12 +53,11 @@ export default function QuizPage() {
 
     return (
         <>
-            <form className='header'>
-                <div className='form-group'>
+        <div className='form-group'>
                     <h2>{name}</h2>
-                    
-                    
                 </div>
+            <form className='header'>
+                
                 <div className='form-group'>
                     <label htmlFor = 'amount'>Number of Questions</label>
                     <input type = "number" id = "amount" min = "1" step = "1" defaultValue = {10} ref={amountEl}></input>

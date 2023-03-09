@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: white;
 }
 #root {
     text-align: center;
@@ -14,18 +15,30 @@
     float: left;
     width: 25%;
     text-align: center;
-    min-width: 250px;
+    min-width: 230px;
+    background-color: #3C1B43;
+    border-radius: 10px;
 }
-
+.category-box h3{
+    color:rgb(253, 250, 251);
+}
+.category-box p{
+    color: rgb(246, 159, 241);
+}
 .category-box:hover {
     cursor: pointer;
-    background-color: aliceblue;
+    box-shadow: 8px 8px 16px rgba(173, 39, 246, 0.5);
+    transition: 0.2s;
+    transform: translateY(-2px);
 }
 
 .category-box a {
     text-decoration: none;
-    color: black;
+    color: rgb(252, 249, 249);
     cursor: pointer;
+}
+.category-box h3:hover{
+    color: rgb(249, 111, 208);
 }
 .choice-box {
     display: flex;
@@ -38,18 +51,26 @@
 
     .category-box {
         margin: 5px;
+        height: 50px;
     }
     .category-box h3 {
         margin: 0;
+        color: rgb(246, 159, 241);
+    }
+    .add-category-button {
+        margin-top: -5px;
     }
 }
 .cat-h2{
-    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    text-decoration: underline;
 }
 .add-category-button {
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
     font-size: xx-large;
     cursor: pointer;
+    padding: 0;
 }

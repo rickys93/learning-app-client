@@ -7,4 +7,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
+}
+#category-name{
+    background-color: white;
+    width:150px;
+    border: solid 1px gray;
+    height: 20px;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 2px 2px 3px rgb(128, 128, 128, 0.5);
+    margin-top: 5px;
+}
+#desciption{
+    background-color: white;
+   
+    border: solid 1px gray;
+    height: 70px;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 2px 2px 3px rgb(128, 128, 128, 0.5);
+    margin-top: 5px;
 }

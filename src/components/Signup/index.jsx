@@ -67,7 +67,7 @@ export default function Account() {
                                     id="first-name"
                                     value={firstName}
                                     onChange={(e) => setFirstName(e.target.value)}
-                                    placeholder={"Enter First Name"}
+                                    placeholder={"First Name"}
                                     required
                                 />
                                 <label 
@@ -80,7 +80,7 @@ export default function Account() {
                                     id="last-name"
                                     value={lastName}
                                     onChange={(e) => setLastName(e.target.value)}
-                                    placeholder={"Enter Last Name"}
+                                    placeholder={"Last Name"}
                                     required
                                 />
                             </div>
@@ -111,9 +111,9 @@ export default function Account() {
                                 placeholder={"Enter Password"}
                                 required
                             />
-                            <button type="submit">Sign Up</button>
+                            <button type="submit" className="d">Sign Up</button>
                         </form>
-                        <div>Already have an account? <button onClick={switchToLogin}>Log in here!</button></div>
+                        <div><h4>Already have an account? </h4><button className="login-btn" onClick={switchToLogin}>Log in here!</button></div>
                     </div>
                 </div>
             </div>

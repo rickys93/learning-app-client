@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     min-width: 240px;
-    background-color: aquamarine;
+    background-color:  #3C1B43;
+    border-bottom: solid 1px aquamarine;
 }
 
 .login{
@@ -11,6 +12,7 @@
     align-self: flex-start;
     flex: 1;
     justify-content: flex-end;
+    height:50px;
 }
 .navbar {
     display: flex;
@@ -41,18 +43,33 @@
     list-style: none;
 }
 
-.a {
+.a , .a-c{
     display: block;
     text-decoration: none;
-    color: rgb(41, 40, 40);
+   
     padding: 1rem;
-    z-index: 1;
-    background-color: white;
+  
+    background-color:  #3C1B43;
+    border-radius: 5px;
+}
+.a{
+    color:aquamarine;
+}
+.a-c{
+    color:white;
+    font-size: 20px;
 }
 
-.navlinks li .a:hover {
-    color: white;
-}
+
+.navlinks ul li .a:hover,  .a-c:hover{
+    color: aquamarine;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                inset 0px 4px 8px rgba(0,255,255,0.3), 
+                inset 0px 8px 16px rgba(0,255,255,0.3);
+    transition: 0.2s;
+    transform: translateY(2px);
+  }
 
 .toggle-button {
     position: absolute;
@@ -68,7 +85,7 @@
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: rgb(40, 40, 40);
+    background-color: aquamarine;
     border-radius: 10px;
 }
 
@@ -81,7 +98,7 @@
         height: 120px;
         width: 100px;
         align-items: flex-start;
-        background-color: aliceblue;
+        background-color:  #3C1B43;
         position: absolute;
     }
 
@@ -92,6 +109,7 @@
     .navlinks {
         display: none;
         width: 100%;
+        background-color:  #3C1B43;
     }
 
     .navlinks ul {
@@ -103,30 +121,41 @@
         text-align: center;
         list-style: none;
     }
-     .a:hover {
-       background-color: white;
-       
-    }
+   
 
     .a {
         padding: .5rem 1rem;
+        background-color: #3C1B43;
     }
+    .a-c{
+        padding: .5rem 1rem;
+        background-color: #3C1B43;
 
+    }
+    .navlinks ul li .a:hover, .a-c:hover{
+        color: #fff;
+        background-color: #333;
+        box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                    inset 0px 4px 8px rgba(0,255,255,0.3), 
+                    inset 0px 8px 16px rgba(0,255,255,0.3);
+        transition: 0.2s;
+        transform: translateY(2px);
+      }
     .navlinks.active {
         display: flex;
     }
 }
-ul{
+/* ul{
     list-style: none;
   }
   a{
     text-decoration: none;
-  }
+  } */
   
-  .menu{
+  /* .menu{
     display: flex;
-  }
-  .menu a{
+  } */
+  /* .menu a{
     height: 40px;
     margin: 10px;
     line-height: 43px;
@@ -137,13 +166,5 @@ ul{
     color: aquamarine;
     background-color: #3C1B43;
     border-radius: 5px;
-  }
-  .menu a:hover{
-    color: #fff;
-    background-color: #333;
-    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
-                inset 0px 4px 8px rgba(0,255,255,0.3), 
-                inset 0px 8px 16px rgba(0,255,255,0.3);
-    transition: 0.2s;
-    transform: translateY(2px);
-  }
+  } */
+ 
