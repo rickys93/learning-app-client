@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-
 import UserAccount from "../UserAccount";
-
+import DarkMode from "../DarkMode";
 import "./style.css";
 
 export default function NavBar() {
@@ -28,6 +27,7 @@ export default function NavBar() {
                   Subjects
                 </NavLink>
               </li>
+              <DarkMode />
             </ul>
           </nav>
         </div>
