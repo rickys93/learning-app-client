@@ -19,8 +19,8 @@ export default function NavBar() {
           <nav className="navlinks" id={mobile ? "hidden" : ""}>
             <ul className="menu">
               <li>
-                <NavLink to="/" className="a">
-                  Home
+                <NavLink to="/" id="logo">
+                  Crammer UK.
                 </NavLink>
               </li>
               <li>
@@ -28,7 +28,6 @@ export default function NavBar() {
                   Categories
                 </NavLink>
               </li>
-              <div className="logo">Crammer UK</div>
             </ul>
           </nav>
         </div>

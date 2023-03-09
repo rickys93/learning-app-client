@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { CategoryList } from "../../components";
 import { UserContext } from "../../App";
 
-// import "/style.css" from "./CategoryList"
-
 export default function Categories() {
   const { user, setUser } = useContext(UserContext);
   console.log("user", user);
@@ -32,21 +30,23 @@ export default function Categories() {
 
   return (
     <>
-      <h2 className="cat-title">Categories</h2>
-      {/* <button>
-        <Link to={"./NewFlashcard"}></Link> New
-      </button> */}
-      <CategoryList categories={defaultCategories} defaultCategories={true} />
-      {Object.keys(user).length ? (
-        <>
-          <h2>My Categories</h2>
-          <CategoryList
-            categories={myCategories}
-            setMyCategories={setMyCategories}
-            defaultCategories={false}
-          />
-        </>
-      ) : null}
+      <div className="categories-page-container">
+        <h2 className="cat-title">Categories</h2>
+        {/* <button>
+          <Link to={"./NewFlashcard"}></Link> New
+        </button> */}
+        <CategoryList categories={defaultCategories} defaultCategories={true} />
+        {Object.keys(user).length ? (
+          <>
+            <h2>My Categories</h2>
+            <CategoryList
+              categories={myCategories}
+              setMyCategories={setMyCategories}
+              defaultCategories={false}
+            />
+          </>
+        ) : null}
+      </div>
     </>
   );
 }
