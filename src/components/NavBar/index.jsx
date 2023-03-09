@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 import UserAccount from "../UserAccount";
-
+import DarkMode from "../DarkMode";
 import "./style.css";
 
 export default function NavBar() {
@@ -28,6 +28,7 @@ export default function NavBar() {
                   Categories
                 </NavLink>
               </li>
+              <DarkMode />
               <div className="logo">Crammer UK</div>
             </ul>
           </nav>
