@@ -1,5 +1,6 @@
 body.dark-mode {
     background-color: #3C1B43;
+    color: aquamarine;
 }
 .theme{
     display: flex;
@@ -7,3 +8,6 @@ body.dark-mode {
     margin-left: 10px;
     margin-right: -15px;
 }
+/* .categories-page-container {
+    color: aquamarine;
+} */

@@ -148,6 +148,9 @@
         display: flex;
     }
 }
+NavLink{
+    color: aquamarine;
+}
 /* ul{
     list-style: none;
 }
