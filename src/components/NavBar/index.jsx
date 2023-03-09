@@ -16,19 +16,16 @@ export default function NavBar() {
             <span className="bar"></span>
           </div>
           <nav className="navlinks" id={mobile ? "hidden" : ""}>
-            <ul className="menu">
-              <li>
-                <NavLink to="/" id="logo">
-                  Crammer UK.
+            <ul>
+              <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
+                <NavLink to="/" className="a-c">
+                  Crammer UK
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
                 <NavLink to="/categories" className="a">
                   Categories
                 </NavLink>
-              </li>
-              <li>
-                <NavLink className="a">About us</NavLink>
               </li>
               <DarkMode />
             </ul>

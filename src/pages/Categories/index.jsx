@@ -31,14 +31,14 @@ export default function Categories() {
   return (
     <>
       <div className="categories-page-container">
-        <h2 className="cat-title">Categories</h2>
+        <h2 className="cat-title">Subjects</h2>
         {/* <button>
           <Link to={"./NewFlashcard"}></Link> New
         </button> */}
         <CategoryList categories={defaultCategories} defaultCategories={true} />
         {Object.keys(user).length ? (
           <>
-            <h2>My Categories</h2>
+            <h2>My Subjects</h2>
             <CategoryList
               categories={myCategories}
               setMyCategories={setMyCategories}

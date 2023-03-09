@@ -47,7 +47,7 @@ export default function Login() {
     return (
             <div className="acc-form">
                 <div className="tab-content">
-                    <div className={`login`}>
+                    <div className="log-pop">
                         <form onSubmit={handlelogin}>
                             <h2>Log In</h2>
                             <label 
@@ -77,12 +77,12 @@ export default function Login() {
                                 placeholder={"Enter Password"}
                                 required
                             />
-                            <button 
+                            <button className="login-btn"
                                 type="submit">
                                     Log In
                             </button>
                         </form>
-                        <div>New? <button onClick={switchToSignup}>Sign up here!</button></div>
+                        <div className="is-new"><h2>New? </h2><button className="d" onClick={switchToSignup}>Sign up here!</button></div>
                     </div>
                 </div>
             </div>

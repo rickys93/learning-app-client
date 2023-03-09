@@ -5,29 +5,59 @@
 .login-container {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .acc-form {
-    background-color: white;
-    margin-top: 50px;
-    height: 230px;
+    background-color: aquamarine;
+  
+    /* height: 230px; */
     width: 90%;
     max-width: 200px;
-    padding: 20px 10px;
+    padding: 0px 10px;
     border-radius: 10px;
+}
+
+.acc-form h2 {
+    color: #3c1b43;
 }
 
 .acc-form form {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
-.acc-form form input,
-button {
+.acc-form form input {
     padding: 5px;
     font-size: 15px;
     margin: 5px 0;
+    border-radius: 4px;
+    border: solid 1px #3C1B43;
+}
+.login-btn, .d{
+   
+    background-color:  #3C1B43;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    color:  rgb(248, 182, 182);
+    box-shadow: 4px 4px 8px rgba(173, 39, 246, 0.5);
+    
+    
+}
+.login-btn:hover, .b:hover{
+    box-shadow: 8px 8px 16px rgba(109, 11, 162, 0.5);
+    transition: 0.2s;
+    transform: translateY(-2px);
+    color: rgb(249, 111, 208);
+}
+.is-new{
+    margin-top: 15px;
+    font-size: medium;
+}
+.d{
+    /* margin-left: 15px; */
+   padding: 7px;
 }
 
 .name-inputs {
@@ -36,39 +66,6 @@ button {
 
 .name-inputs input {
     width: 50%;
-}
-
-.tab-group {
-    margin: 0;
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.tab-group li {
-    list-style: none;
-}
-
-.tab-group a {
-    cursor: pointer;
-    padding: 15px;
-}
-
-.tab-group a:hover {
-    opacity: 0.8;
-}
-
-.tab-content h2 {
-    text-align: center;
-}
-
-.tab {
-    background-color: rgb(224, 224, 224);
-}
-
-.tab.active {
-    background-color: rgb(255, 127, 127);
 }
 
 .visually-hidden {
@@ -81,4 +78,17 @@ button {
     clip: rect(0 0 0 0);
     white-space: nowrap;
     border: 0;
+}
+
+.signuploginhere {
+    text-decoration: underline;
+}
+
+.signuploginhere:hover {
+    cursor: pointer;
+    color: #3c1b43d4;
+}
+.login-signup-navigater {
+    font-weight: 600;
+    font-size: large;
 }

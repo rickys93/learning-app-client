@@ -6,8 +6,8 @@
 
 .userAccount h2 {
     font-size: calc(13px + 0.5vw);
-    color: #3c1b43;
-    margin: auto 20px auto 0px;
+    color: aquamarine;
+    margin-right: 5px;
 }
 
 .userAccount a {
@@ -21,14 +21,21 @@
     padding: 5px;
     height: 30px;
     margin-right: 10px;
-    background-color: white;
+    background-color: #5b3263;
     border-radius: 5px;
     font-size: calc(10px + 0.5vw);
-    box-shadow: 3px 3px 5px 3px rgb(255 165 0 / 30%);
+    box-shadow: 3px 3px 5px 1px rgb(127 255 212 /30%);
     border: none;
     margin-left: 5px;
     min-width: 50px;
+    color: aquamarine;
 }
+.logout:hover{
+  box-shadow: 0px 8px 10px #2ee59d66;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .btn {
     display: flex;
     justify-content: flex-end;
@@ -44,18 +51,23 @@ a {
 
 .menu {
     display: flex;
-}
-.menu a {
+  }
+  .menu a{
+ 
+    
+    padding: 8px;
     height: 40px;
-    margin: 10px;
-    line-height: 43px;
-    padding: 0 40px;
-    display: flex;
-    font-size: 1.2rem;
-    font-weight: 600;
+    margin-right: 10px;
+    background-color: #5b3263;
     border-radius: 5px;
-}
-.menu a:hover {
+    font-size: calc(10px + 0.5vw);
+    box-shadow: 3px 3px 5px 1px rgb(127 255 212 /30%);
+    border: none;
+    margin-left: 5px;
+    min-width: 50px;
+    color: aquamarine;
+  }
+  .menu a:hover{
     color: #fff;
     background-color: #333;
     box-shadow: inset 0px 2px 4px rgba(0, 255, 255, 0.3),
