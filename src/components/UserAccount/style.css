@@ -23,17 +23,18 @@
     margin-right: 10px;
     background-color: #5b3263;
     border-radius: 5px;
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(15px);
     box-shadow: 3px 3px 5px 1px rgb(127 255 212 /30%);
     border: none;
     margin-left: 5px;
     min-width: 50px;
     color: aquamarine;
+    cursor: pointer;
 }
-.logout:hover{
-  box-shadow: 0px 8px 10px #2ee59d66;
-  color: #fff;
-  transform: translateY(-2px);
+.logout:hover {
+    box-shadow: 0px 8px 10px #2ee59d66;
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 .btn {
@@ -51,10 +52,8 @@ a {
 
 .menu {
     display: flex;
-  }
-  .menu a{
- 
-    
+}
+.menu a {
     padding: 8px;
     height: 40px;
     margin-right: 10px;
@@ -66,8 +65,8 @@ a {
     margin-left: 5px;
     min-width: 50px;
     color: aquamarine;
-  }
-  .menu a:hover{
+}
+.menu a:hover {
     color: #fff;
     background-color: #333;
     box-shadow: inset 0px 2px 4px rgba(0, 255, 255, 0.3),

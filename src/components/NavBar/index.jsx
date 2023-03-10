@@ -24,7 +24,7 @@ export default function NavBar() {
               </li>
               <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
                 <NavLink to="/categories" className="a">
-                  Categories
+                  Learn
                 </NavLink>
               </li>
               <li>

@@ -49,5 +49,6 @@ function Category({ categoryData, handleDeleteButton }) {
         </>
     )
 }
+console.log(Category)
 
 export default Category

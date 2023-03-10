@@ -28,12 +28,9 @@ function NewCategoryForm({myCategories, setMyCategories}) {
             },
         }
         const response = await fetch("http://localhost:3000/categories", options)
-        console.log('response', response)
         if (response.status === 201) {
             const data = await response.json()
-            console.log('data', data)
-            setPopupContent(<FormComplete formName={"Category"}/>)
-            console.log('categories', [...myCategories, data])
+            setPopupContent(<FormComplete message={"Category added succesfully!"}/>)
             setMyCategories(prev => [...prev, data])
         }
 

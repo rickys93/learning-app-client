@@ -8,8 +8,7 @@ import {
   FlashcardPage,
   Categories,
   QuizPage,
-  AboutUsPage,
-  NewFlashcard,
+  AboutPage,
 } from "./pages";
 
 import "./index.css";
@@ -75,7 +74,7 @@ export default function App() {
                 element={<FlashcardPage />}
               />
               <Route path="/quiz/:categoryId" element={<QuizPage />} />
-              <Route path="about" element={<AboutUsPage />} />
+              <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

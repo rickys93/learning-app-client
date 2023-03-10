@@ -10,7 +10,7 @@
 
 .acc-form {
     background-color: aquamarine;
-  
+
     /* height: 230px; */
     width: 90%;
     max-width: 200px;
@@ -32,34 +32,39 @@
     font-size: 15px;
     margin: 5px 0;
     border-radius: 4px;
-    border: solid 1px #3C1B43;
+    border: solid 1px #3c1b43;
 }
-.login-btn, .d{
-   
-    background-color:  #3C1B43;
+.login-btn,
+.d {
+    background-color: #3c1b43;
     border: none;
     border-radius: 8px;
     height: 30px;
-    color:  rgb(248, 182, 182);
+    color: rgb(248, 182, 182);
     box-shadow: 4px 4px 8px rgba(173, 39, 246, 0.5);
     margin-bottom: 10px;
     padding: 0px 5px;
-    
-    
 }
-.login-btn:hover, .b:hover, .d:hover{
+.login-btn:hover,
+.b:hover,
+.d:hover {
     box-shadow: 8px 8px 16px rgba(109, 11, 162, 0.5);
     transition: 0.2s;
     transform: translateY(-2px);
     color: rgb(249, 111, 208);
 }
-.is-new{
+.is-new {
     /* margin-top: 15px; */
     font-size: medium;
 }
-.d{
+.d {
     /* margin-left: 15px; */
-   padding: 7px;
+    padding: 7px;
+    margin-bottom: 40px;
+}
+
+.login-btn {
+    margin-bottom: 40px;
 }
 
 .name-inputs {

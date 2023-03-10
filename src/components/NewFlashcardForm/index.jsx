@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import './style.css'
 import { UserContext, PopupContext } from "../../App";
-import { Category } from "..";
+import { Category, FormComplete } from "..";
 
 export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
   const { openPopup, setPopupContent } = useContext(PopupContext)
@@ -9,12 +9,45 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
   const [answer1, setAnswer1] = useState("");
   const [answer2, setAnswer2] = useState("");
   const [answer3, setAnswer3] = useState("");
-  const [answer4, setAnswer4] = useState("");
   const [correctAnswer, setCorrectAnswer] = useState("");
 
-  // function handleBackClick() {
-  //   setPopupContent(<Category categoryData={categoryData} handleDeleteButton={handleDeleteButton}/>)
-  // }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const questionData = {
+      category_id:categoryData.id,
+      question
+    }
+    const answerData = [
+      {answer:answer1, correct:false},
+      {answer:answer2, correct:false},
+      {answer:answer3, correct:false},
+      {answer:correctAnswer, correct:true},
+    ]
+    const data = JSON.stringify({
+      question:questionData,
+      answers:answerData
+    })
+    const options = {
+      method:"POST",
+      body:data,
+      headers: {
+          'Content-Type': 'application/json'
+      },
+    } 
+    console.log('options', options)
+    const response = await fetch("http://localhost:3000/questions", options)
+    if (response.status === 201) {
+        const data = await response.json()
+        setPopupContent(<FormComplete message={"Question added succesfully!"} handleBackClick={handleBackClick}/>)
+        setMyCategories(prev => [...prev, data])
+    }
+
+  }  
+
+  function handleBackClick() {
+    setPopupContent(<Category categoryData={categoryData} handleDeleteButton={handleDeleteButton}/>)
+  }
 
   function handleAnswer1(e) {
     setAnswer1(e.target.value);
@@ -25,9 +58,6 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
   function handleAnswer3(e) {
     setAnswer3(e.target.value);
   }
-  function handleAnswer4(e) {
-    setAnswer4(e.target.value);
-  }
   function handleCorrectAnswer(e) {
     setCorrectAnswer(e.target.value);
   }
@@ -37,11 +67,14 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
 
   return (
     <div className="add-question-form">
-      {/* <button
+      <button
         onClick={handleBackClick}
-      >&#8592;</button> */}
+      >&#8592;</button>
       <h1>Add New Question</h1>
-      <form action="">
+      <form 
+        onSubmit={handleSubmit}
+      
+      >
         <div>
           <h3>Category: {categoryData.name}</h3>
           
@@ -52,6 +85,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
               value={question}
               placeholder="Enter Question"
               onChange={handleQuestion}
+              required
             />
           </label>
           <br />
@@ -62,6 +96,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
               value={answer1}
               placeholder="First Answer"
               onChange={handleAnswer1}
+              required
             />
           </label>
           <br />
@@ -72,6 +107,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
               value={answer2}
               placeholder="Second Answer"
               onChange={handleAnswer2}
+              required
             />
           </label>
           <br />
@@ -83,16 +119,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
               value={answer3}
               placeholder="Third Answer"
               onChange={handleAnswer3}
-            />
-          </label>
-          <br />
-          <label htmlFor="answer4">
-            4th Answer:<br/>
-            <input
-              type="text"
-              value={answer4}
-              placeholder="Fourth Answer"
-              onChange={handleAnswer4}
+              required
             />
           </label>
           <br />
@@ -103,11 +130,12 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
               value={correctAnswer}
               placeholder="Correct Answer"
               onChange={handleCorrectAnswer}
+              required
             />
           </label>
           <br />
         </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

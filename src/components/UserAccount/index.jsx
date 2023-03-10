@@ -38,14 +38,12 @@ function UserAccount() {
         <>
           <ul className="menu">
             <li>
-              <Link onClick={handleLoginClick}>Log In</Link>
+              <Link onClick={() => {openPopup(<Login />)}}>Log In</Link>
             </li>
             <li>
-              <Link onClick={handleSignupClick}>Sign Up</Link>
+              <Link onClick={() => {openPopup(<Signup />)}}>Sign Up</Link>
             </li>
           </ul>
-          {/* <button onClick={handleLoginClick}>Log In</button>
-          <button onClick={handleSignupClick}>Sign Up</button> */}
         </>
       )}
     </div>
