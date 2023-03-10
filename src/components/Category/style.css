@@ -18,47 +18,48 @@
 .category-container div {
     margin-bottom: 20px;
 }
-.cat-descr{
+.cat-descr {
     width: 90%;
 }
-.b-cont{
+.b-cont {
     display: flex;
     justify-content: space-between;
     width: 70%;
 }
-.c-cont{
+.c-cont {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
 }
-.c-cont-a{
-     display: flex;
+.c-cont-a {
+    display: flex;
     justify-content: center;
     width: 100%;
 }
-.b{
+.b {
     width: 60px;
-    background-color:  #3C1B43;
+    background-color: #3c1b43;
     border: none;
     border-radius: 8px;
     height: 30px;
-    color:  rgb(248, 182, 182);
+    color: rgb(248, 182, 182);
     box-shadow: 4px 4px 8px rgba(173, 39, 246, 0.5);
-    
+    margin-bottom: 30px;
+    cursor: pointer;
 }
-.c{
-  
-    background-color:  #3C1B43;
+.c {
+    background-color: #3c1b43;
     border: none;
     border-radius: 8px;
     height: 30px;
-    color:  rgb(248, 182, 182);
+    color: rgb(248, 182, 182);
     padding: 3px 8px;
     box-shadow: 4px 4px 8px rgba(173, 39, 246, 0.5);
-   
+    cursor: pointer;
 }
-.b:hover, .c:hover{
+.b:hover,
+.c:hover {
     box-shadow: 8px 8px 16px rgba(109, 11, 162, 0.5);
     transition: 0.2s;
     transform: translateY(-2px);

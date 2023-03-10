@@ -37,11 +37,14 @@ body {
 .go-back-button {
     position: absolute;
     left: 50px;
-    padding: 10px;
+    top: 20px;
+    font-size: large;
+    font-weight: 900;
+    padding: 8px 12px;
     background-color: rgba(127, 255, 212, 0);
-    border: aquamarine solid;
+    border: black solid;
     border-radius: 5px;
-    color: aquamarine;
+    color: black;
 }
 
 .go-back-button:hover {

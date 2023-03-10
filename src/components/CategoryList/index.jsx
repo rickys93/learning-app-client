@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { NewCategoryForm, Category } from '../../components'
 import { UserContext, PopupContext } from "../../App";
-import { NewFlashcard } from "../../pages";
+
 
 import "./style.css";
 

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserContext, PopupContext } from "../../App";
 
-import { Login } from "..";
+import { FormComplete, Login } from "..";
 
 
 export default function Account() {
@@ -42,7 +42,11 @@ export default function Account() {
             setUser(data.user)
             localStorage.setItem("token", user.token)
             closePopup()
-            navigate("/")
+            openPopup(<FormComplete message={"Registration successful!"}/>)
+            // navigate("/")
+
+        } else {
+
         }
         
     };

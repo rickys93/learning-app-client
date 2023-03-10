@@ -1,10 +1,19 @@
 import React from 'react'
 import './style.css'
 
-function FormComplete({formName}) {
+function FormComplete({message, handleBackClick}) {
   return (
+    
     <div className='form-complete'>
-        <h2>{formName} added successfully!</h2>
+
+        {handleBackClick ?
+            <button
+              onClick={handleBackClick}
+            >&#8592;</button>
+            : null
+        }
+
+        <h2>{message}</h2>
     </div>
   )
 }

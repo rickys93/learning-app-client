@@ -8,7 +8,6 @@ import {
   FlashcardPage,
   Categories,
   QuizPage,
-  NewFlashcard,
 } from "./pages";
 
 import "./index.css";
