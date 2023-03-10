@@ -26,9 +26,9 @@ function Category({ categoryData, handleDeleteButton }) {
                     {categoryData.description}
                 </div>
                 <div className='b-cont'>
-                    <button className='b'
+                    <button className='bc'
                         onClick={() => handleLinkClick(`/flashcards/${categoryData.id}`)}
-                    >Learn</button>
+                    >Memorize</button>
                     <button  className='b'
                         onClick={() => handleLinkClick(`/quiz/${categoryData.id}`)}
                     >Quiz</button>
