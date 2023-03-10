@@ -75,7 +75,7 @@ export default function QuizPage() {
                     >Generate</button>
                 </div>
             </form>
-            <div><QuizCard flashcards = {flashcards} length = {length} amount={amount} loading = {loading} next={next} setNext={setNext} selected={selected} setSelected={setSelected}/></div>
+            <div className='quiz'><QuizCard flashcards = {flashcards} length = {length} amount={amount} loading = {loading} next={next} setNext={setNext} selected={selected} setSelected={setSelected}/></div>
         </>
     )
 }

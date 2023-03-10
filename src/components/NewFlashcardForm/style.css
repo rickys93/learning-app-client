@@ -6,13 +6,17 @@
 
 .add-question-form h1 {
     font-size: 20px;
+    color: black;
 }
 .add-question-form h3 {
     font-size: 20px;
     padding: 3px;
+    color: black;
 }
 .add-question-form label {
     font-size: 12px;
+    color: black;
+    margin-right: 5px;
 }
 .add-question-form input {
     background-color: white;

@@ -11,6 +11,8 @@ export default function FlashcardPage() {
   const [cat , setCat] = useState(categoryId)
   const categoryEl = useRef()
   const amountEl = useRef()
+  
+ 
   useEffect(()=>{
 
   
@@ -62,7 +64,7 @@ console.log(cat)
 
     </form>
     
-  <div className='card-container'><Flashcard id = {cat} limit = {amount}/></div>
+  <div className='card-container'><Flashcard id = {cat} limit = {amount}  /></div>
 
     </>
   );

@@ -79,7 +79,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
           <h3>Category: {categoryData.name}</h3>
           
           <label htmlFor="question">
-            Question:
+            Question:<br/>
             <input
               type="text"
               value={question}
@@ -90,7 +90,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
           </label>
           <br />
           <label htmlFor="answer1">
-            1st Answer:
+            1st Answer:<br/>
             <input
               type="text"
               value={answer1}
@@ -101,7 +101,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
           </label>
           <br />
           <label htmlFor="answer2">
-            2nd Answer:
+            2nd Answer:<br/>
             <input
               type="text"
               value={answer2}
@@ -112,7 +112,8 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
           </label>
           <br />
           <label htmlFor="answer3">
-            3rd Answer:
+            3rd Answer:<br/>
+            
             <input
               type="text"
               value={answer3}
@@ -123,7 +124,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
           </label>
           <br />
           <label htmlFor="correctAnswer">
-            Correct Answer:
+            Correct Answer:<br/>
             <input
               type="text"
               value={correctAnswer}

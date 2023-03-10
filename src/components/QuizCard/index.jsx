@@ -22,7 +22,7 @@ export default function QuizCard({flashcards, length, loading, amount, next, set
     function displayCard(){
 
         if (next!==length){return (
-            <>
+            <><div>
                 <div
                     className = 'card'
                 >
@@ -39,7 +39,7 @@ export default function QuizCard({flashcards, length, loading, amount, next, set
                     <button className='prev_btn' onClick={handleQuit}>Quit</button>
                     <button className='next_btn' disabled= {next===amount ?  true: false }  onClick={handleNext}>Next</button>
                 </div>
-        
+                </div>
             </>
         )
         } else {

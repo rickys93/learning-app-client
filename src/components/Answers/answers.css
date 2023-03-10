@@ -67,6 +67,7 @@ cursor: pointer;
     border: 1px;
     border-color: black;
     margin-top: 20px;
+    max-width: 400px;
 }
 .score_title{
     font-size: 30px;
@@ -83,4 +84,9 @@ background-color: #3C1B43;
 color:  rgb(248, 182, 182);
 
 
+}
+.quiz{
+    display: flex;
+  
+    justify-content: center;
 }

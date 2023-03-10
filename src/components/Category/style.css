@@ -20,6 +20,7 @@
 }
 .cat-descr {
     width: 90%;
+    color: black;
 }
 .b-cont {
     display: flex;
