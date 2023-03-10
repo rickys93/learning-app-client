@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react'
 
 export default function Flashcard({id, limit}) {
-    const [flashcards, setFlashcards] = useState([])
+    
 const [ flip, setFlip] = useState(false)
 const [next, setNext] = useState(0)
 const  [length, setLength] = useState()
+const [flashcards, setFlashcards] = useState([])
 const [loading, setLoading] = useState(true);
-
 
 const counter = next+1
 

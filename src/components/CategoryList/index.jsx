@@ -8,7 +8,7 @@ import { NewFlashcard } from "../../pages";
 import "./style.css";
 
 export default function CategoryList({categories, setMyCategories, defaultCategories}) {
-    const {user, setUser} = useContext(UserContext)
+   
     const { openPopup } = useContext(PopupContext)
 
     const openAddNewCategory = () => {
@@ -37,7 +37,7 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
     return (
         <div className="categories-list">
         {categories.map((category) => (
-            <div
+            <div data-testid ={'0'}
             key={category.id}
             onClick={() => clickCategory(category.id)}
             className="category-box"
