@@ -27,12 +27,12 @@ export default function NavBar() {
                   Learn
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
                 <NavLink to="/about" className="a">
                   About us
                 </NavLink>
               </li >
-             <li className="a"> <DarkMode /></li>
+             <li className="a" onClick={() => (mobile ? setMobile(!mobile) : mobile)}> <DarkMode /></li>
             </ul>
           </div>
         </div>
