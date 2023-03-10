@@ -18,7 +18,7 @@ export default function FlashcardPage() {
   
     async function loadCategories() {
 
-      const response = await fetch(`http://localhost:3000/categories`);
+      const response = await fetch(`https://learning-app-server.onrender.com/categories`);
       const data = await response.json();
     console.log(data)
       

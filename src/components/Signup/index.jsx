@@ -35,7 +35,7 @@ export default function Account() {
                 password:signUpPassword
             })
         }
-        const response = await fetch("http://localhost:3000/users/register", options)
+        const response = await fetch("https://learning-app-server.onrender.com/users/register", options)
         if (response.status === 201) {
             const data = await response.json()
             // now set user details to user and navigate to main page 

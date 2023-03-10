@@ -19,7 +19,7 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
         const options = {
         method:"DELETE"
         }
-        const response = await fetch(`http://localhost:3000/categories/${id}`, options)
+        const response = await fetch(`https://learning-app-server.onrender.com/categories/${id}`, options)
         console.log('response', response)
         if (response.status === 204) {
             const updatedMyCategories = categories.filter(category => category.id !== id)

@@ -20,7 +20,7 @@ export default function QuizPage() {
 
     useEffect(()=>{
         async function loadCategories() {
-            const response = await fetch(`http://localhost:3000/categories`);
+            const response = await fetch(`https://learning-app-server.onrender.com/categories`);
             const data = await response.json();
            
             setName(data.filter(c => c.id==cat)[0].name)
@@ -37,7 +37,7 @@ export default function QuizPage() {
       
         const amount = amountEl.current.value
         setAmount(amount)
-        const response = await fetch(`http://localhost:3000/questions/categories/${cat}?limit=${amount}`);
+        const response = await fetch(`https://learning-app-server.onrender.com/questions/categories/${cat}?limit=${amount}`);
         console.log('response', response)
         const data = await response.json();
 
