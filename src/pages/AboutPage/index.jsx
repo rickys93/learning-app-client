@@ -46,7 +46,7 @@ export default function AboutUsPage() {
 
           <form onSubmit={handleSubmit}>
             <label>
-              Feedback:&nbsp;
+              Feedback:&nbsp;<br/>
               <textarea
                 className="textarea-1"
                 value={feedback}
