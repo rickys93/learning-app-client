@@ -3,7 +3,14 @@ body.dark-mode {
     color: aquamarine;
 }
 
-body.dark-mode div {
+body.dark-mode .card {
+    color: black;
+}
+
+body.dark-mode .button_container button {
+    background-color: rgb(213, 213, 213);
+    font-weight: 700;
+    color: #3c1b43;
 }
 
 .theme {
