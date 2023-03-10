@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { NewCategoryForm, Category } from '../../components'
+import { NewCategoryForm, Category, FormComplete } from '../../components'
 import { UserContext, PopupContext } from "../../App";
 
 
@@ -9,7 +9,7 @@ import "./style.css";
 
 export default function CategoryList({categories, setMyCategories, defaultCategories}) {
    
-    const { openPopup } = useContext(PopupContext)
+    const { openPopup, setPopupContent } = useContext(PopupContext)
 
     const openAddNewCategory = () => {
         openPopup(<NewCategoryForm myCategories={categories} setMyCategories={setMyCategories}/>)
@@ -22,8 +22,11 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
         const response = await fetch(`http://localhost:3000/categories/${id}`, options)
         console.log('response', response)
         if (response.status === 204) {
-        const updatedMyCategories = categories.filter(category => category.id !== id)
-        setMyCategories(updatedMyCategories)
+            const updatedMyCategories = categories.filter(category => category.id !== id)
+            console.log('updatedMyCategories', updatedMyCategories)
+            setMyCategories(updatedMyCategories)
+            setPopupContent(<FormComplete message={"Category deleted successfully!"}/>)
+
         }
 
     }
