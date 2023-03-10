@@ -1,24 +1,62 @@
-*{
-    background: navajowhite;
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
     text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.intro-div{
-    margin-top: 100px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 10px;
-    margin-inline: 500px;
-}
-.h1-lp{
-    font-size: 30px;
-}
-.intro{
-font-size: 15px;
+body {
+    background: #f4f4f4;
 }
 
+.button-colours {
+    padding: 10px;
+    display: flex;
+    font-weight: 600;
+    color: aquamarine;
+    background-color: #3c1b43;
+    border-radius: 5px;
+    border: solid aquamarine;
+}
+.button-colours:hover {
+    color: #fff;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0, 255, 255, 0.3),
+        inset 0px 4px 8px rgba(0, 255, 255, 0.3),
+        inset 0px 8px 16px rgba(0, 255, 255, 0.3);
+    transition: 0.2s;
+    transform: translateY(2px);
+    cursor: pointer;
+}
+
+.game-title {
+    position: relative;
+}
+.go-back-button {
+    position: absolute;
+    left: 10px;
+    padding: 4px;
+    background-color: #3c1b43;
+    border: aquamarine solid;
+    border-radius: 5px;
+    color: aquamarine;
+    width: 40px;
+}
+
+.go-back-button:hover {
+    cursor: pointer;
+}
+@media (max-width: 800px) {
+    .go-back-button {
+        position: absolute;
+        left: 2px;
+        padding: 4px;
+        background-color: #3c1b43;
+        border: aquamarine solid;
+        border-radius: 5px;
+        color: aquamarine;
+        width: 30px;
+    }
+}

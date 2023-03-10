@@ -1,0 +1,164 @@
+.card,
+.flashcard {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: aquamarine;
+    transform-style: preserve-3d;
+    max-width: 480px;
+    margin: 0 auto 0 auto;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+    transition: 0.3s;
+    padding: 10px;
+
+    width: 95%;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.card-container h2{
+    color: black;
+}
+.card {
+    min-height: 100px;
+}
+.flashcard {
+    min-height: 150px;
+}
+#category,
+#amount {
+    background-color: white;
+    width: 130px;
+    border: solid 1px gray;
+    height: 20px;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 2px 2px 3px rgb(128, 128, 128, 0.5);
+}
+
+.card.flip,
+.flashcard.flip {
+    --rotate-y: 180deg;
+}
+.card .front,
+.card .back,
+.flashcard .front,
+.flashcard .back {
+    position: absolute;
+    padding: 10px;
+    backface-visibility: hidden;
+    background-color: aquamarine;
+    text-align: center;
+    font-size: calc(13px + 0.5vw);
+    width: 98%;
+    color: black;
+}
+
+.card .back,
+.flashcard .back {
+    transform: rotateY(180deg);
+}
+.next_btn {
+    margin-left: 50px;
+}
+.prev_btn {
+    margin-right: 50px;
+}
+.counter {
+    top: 5px;
+    color: black;
+    position: fixed;
+    left: 15px;
+    background: none;
+    font-size: calc(11px + 0.5vw);
+}
+.next_btn,
+.prev_btn {
+    background-color: #3c1b43;
+    border: none;
+    border-radius: 8px;
+    width: 60px;
+    height: 30px;
+    color: rgb(248, 182, 182);
+    padding: 3px 8px;
+    box-shadow: 5px 5px 8px rgba(173, 39, 246, 0.5);
+    cursor: pointer;
+}
+.next_btn:hover,
+.prev_btn:hover {
+    color: rgb(250, 112, 135);
+    background-color: rgba(90, 41, 100);
+}
+.next_btn:active,
+.prev_btn:active {
+    box-shadow: 8px 8px 16px rgba(109, 11, 162, 0.5);
+    transition: 0.2s;
+    transform: translateY(2px);
+    color: rgb(249, 111, 208);
+}
+.button_container {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    padding: 10px;
+}
+
+.button_container button {
+    font-weight: 700;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: white;
+    padding: 20px 30px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: white;
+}
+.form-group h2 {
+    text-decoration: underline;
+    color: black;
+}
+h2 {
+    text-align: center;
+}
+.form-group > label {
+    background-color: rgb(250, 252, 250);
+    font-size: 1rem;
+    padding-bottom: 5px;
+    font-weight: 700;
+    color: black;
+}
+
+.generate_btn {
+    background-color: #3c1b43;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    color: rgb(248, 182, 182);
+    padding: 3px 8px;
+    box-shadow: 5px 5px 8px rgba(173, 39, 246, 0.5);
+    cursor: pointer;
+}
+.generate_btn:hover {
+    box-shadow: 8px 8px 16px rgba(109, 11, 162, 0.5);
+    transition: 0.2s;
+    transform: translateY(-2px);
+    color: rgb(249, 111, 208);
+}

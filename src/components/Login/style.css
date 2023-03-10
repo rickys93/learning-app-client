@@ -1,0 +1,101 @@
+.display-none {
+    display: none;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.acc-form {
+    background-color: aquamarine;
+
+    /* height: 230px; */
+    width: 90%;
+    max-width: 200px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+.acc-form h2 {
+    color: #3c1b43;
+}
+
+.acc-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-form form input {
+    padding: 5px;
+    font-size: 15px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: solid 1px #3c1b43;
+}
+.login-btn,
+.d {
+    background-color: #3c1b43;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    color: rgb(248, 182, 182);
+    box-shadow: 4px 4px 8px rgba(173, 39, 246, 0.5);
+    margin-bottom: 10px;
+    padding: 0px 5px;
+}
+.login-btn:hover,
+.b:hover,
+.d:hover {
+    box-shadow: 8px 8px 16px rgba(109, 11, 162, 0.5);
+    transition: 0.2s;
+    transform: translateY(-2px);
+    color: rgb(249, 111, 208);
+}
+.is-new {
+    /* margin-top: 15px; */
+    font-size: medium;
+}
+.d {
+    /* margin-left: 15px; */
+    padding: 7px;
+    margin-bottom: 40px;
+}
+
+.login-btn {
+    margin-bottom: 40px;
+}
+
+.name-inputs {
+    display: flex;
+}
+
+.name-inputs input {
+    width: 50%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.signuploginhere {
+    text-decoration: underline;
+}
+
+.signuploginhere:hover {
+    cursor: pointer;
+    color: #3c1b43d4;
+}
+.login-signup-navigater {
+    font-weight: 600;
+    font-size: large;
+}

@@ -1,18 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import UserAccount from "../UserAccount";
+import DarkMode from "../DarkMode";
+import "./style.css";
 
 export default function NavBar() {
+  const [mobile, setMobile] = useState(false);
   return (
     <>
-      <header className="a">
-        <nav className="navbar">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/categories">Categories</NavLink>
-          <NavLink to="/flashcards">Memorize</NavLink>
-          <NavLink to="/quiz">Quiz</NavLink>
-          <NavLink to="/account">Account</NavLink>
-        </nav>
-      </header>
+      <nav className="main">
+        <div className="navbar">
+          <div className="toggle-button" onClick={() => setMobile(!mobile)}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+          <div className="navlinks" id={mobile ? "hidden" : ""}>
+            <ul>
+              <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
+                <NavLink to="/" className="a-c">
+                  Crammer UK
+                </NavLink>
+              </li>
+              <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
+                <NavLink to="/categories" className="a">
+                  Learn
+                </NavLink>
+              </li>
+              <li onClick={() => (mobile ? setMobile(!mobile) : mobile)}>
+                <NavLink to="/about" className="a">
+                  About us
+                </NavLink>
+              </li >
+             <li className="a" onClick={() => (mobile ? setMobile(!mobile) : mobile)}> <DarkMode /></li>
+            </ul>
+          </div>
+        </div>
+        <div className="login">
+          <UserAccount />
+        </div>
+      </nav>
       <Outlet />
     </>
   );

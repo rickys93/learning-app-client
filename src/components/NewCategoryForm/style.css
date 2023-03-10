@@ -1,0 +1,45 @@
+.category-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.category-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+#category-name{
+    background-color: white;
+    width:150px;
+    border: solid 1px gray;
+    height: 20px;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 2px 2px 3px rgb(128, 128, 128, 0.5);
+    margin-top: 5px;
+}
+#desciption{
+    background-color: white;
+   
+    border: solid 1px gray;
+    height: 70px;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 2px 2px 3px rgb(128, 128, 128, 0.5);
+    margin-top: 5px;
+    width: 95%;
+}
+.category-form h2 {
+    color: #3c1b43;
+}
+.category-form input {
+    padding: 5px;
+    font-size: 15px;
+    margin: 5px 0;
+}
+.category-form textarea {
+    resize: none;
+    padding: 5px;
+    margin-bottom: 10px;
+}

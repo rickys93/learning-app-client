@@ -1,0 +1,25 @@
+body.dark-mode {
+    background-color: #3c1b43;
+    color: aquamarine;
+}
+
+body.dark-mode .card {
+    color: black;
+}
+
+body.dark-mode .button_container button {
+    background-color: rgb(213, 213, 213);
+    font-weight: 700;
+    color: #3c1b43;
+}
+
+.theme {
+    display: flex;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: -15px;
+    color: aquamarine;
+}
+/* .categories-page-container {
+    color: aquamarine;
+} */
