@@ -20,10 +20,8 @@ export default function CategoryList({categories, setMyCategories, defaultCatego
         method:"DELETE"
         }
         const response = await fetch(`https://learning-app-server.onrender.com/categories/${id}`, options)
-        console.log('response', response)
         if (response.status === 204) {
             const updatedMyCategories = categories.filter(category => category.id !== id)
-            console.log('updatedMyCategories', updatedMyCategories)
             setMyCategories(updatedMyCategories)
             setPopupContent(<FormComplete message={"Category deleted successfully!"}/>)
 

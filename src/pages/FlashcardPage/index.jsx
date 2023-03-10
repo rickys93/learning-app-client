@@ -20,7 +20,6 @@ export default function FlashcardPage() {
 
       const response = await fetch(`https://learning-app-server.onrender.com/categories`);
       const data = await response.json();
-    console.log(data)
       
     setName(data.filter(c => c.id==cat)[0].name)
 
@@ -33,10 +32,8 @@ loadCategories();
 
 function handleSubmit(e){
   e.preventDefault()
-  console.log("in")
 setAmount(amountEl.current.value)
 
-console.log(cat)
 
 
 }

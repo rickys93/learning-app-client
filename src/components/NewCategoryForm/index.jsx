@@ -18,7 +18,6 @@ function NewCategoryForm({myCategories, setMyCategories}) {
                 user_id:user.id
             }
         ) 
-        console.log('formData', formData)
         e.preventDefault()
         const options = {
             method:"POST",

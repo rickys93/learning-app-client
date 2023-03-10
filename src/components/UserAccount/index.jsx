@@ -20,7 +20,6 @@ function UserAccount() {
   };
 
   const handleLogOut = () => {
-    console.log("here");
     localStorage.clear();
     navigate("/");
     window.location.reload();

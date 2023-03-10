@@ -35,7 +35,6 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
           'Content-Type': 'application/json'
       },
     } 
-    console.log('options', options)
     const response = await fetch("https://learning-app-server.onrender.com/questions", options)
     if (response.status === 201) {
         const data = await response.json()
