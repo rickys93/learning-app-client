@@ -17,12 +17,10 @@ const handleCheck = (o)=>{
     setSelected(o)
     if (o.correct === true)
     setScore(score +1)
-    console.log(score)
 }
 
  
 function displayResult(){
-    console.log("i am score" + score)
     return(
         <div className='result'>
         <span className='score_title'>Your final score is<br/> {`${score}/${limit}`}</span>

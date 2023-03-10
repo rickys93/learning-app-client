@@ -37,7 +37,6 @@ export default function Login() {
             const data = await response.json()
             // now set user details to user and navigate to main page 
             setUser(data.user)
-            console.log('user.token', data.user.token)
             localStorage.setItem("token", data.user.token)
             closePopup()
             navigate("/")

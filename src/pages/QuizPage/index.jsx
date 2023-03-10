@@ -38,15 +38,12 @@ export default function QuizPage() {
         const amount = amountEl.current.value
         setAmount(amount)
         const response = await fetch(`https://learning-app-server.onrender.com/questions/categories/${cat}?limit=${amount}`);
-        console.log('response', response)
         const data = await response.json();
 
-        console.log('data', data)
         
         const shuffled = data.sort(() => 0.5 - Math.random())
         setLength(shuffled.length)
         setFlashcards(shuffled);
-        console.log(flashcards)
         setNext(0)
         setSelected()
         setLoading(false);

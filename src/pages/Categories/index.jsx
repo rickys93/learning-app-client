@@ -5,7 +5,6 @@ import { UserContext } from "../../App";
 
 export default function Categories() {
   const { user, setUser } = useContext(UserContext);
-  console.log("user", user);
   const [defaultCategories, setDefaultCategories] = useState([]);
   const [myCategories, setMyCategories] = useState([]);
   // const [stem, setStem] = useState(false);

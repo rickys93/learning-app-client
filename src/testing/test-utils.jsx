@@ -5,7 +5,6 @@ import { UserContext, PopupContext } from '../App';
 function render(ui, { user = {}, popup = {}, ...options } = {}) {
   const userValue = { user, setUser: () => {} };
   const popupValue = { openPopup: () => {}, closePopup: () => {}, setPopupContent: () => {}, ...popup };
-  console.log(popupValue)
   return rtlRender(
     <BrowserRouter>
       <UserContext.Provider value={userValue}>
