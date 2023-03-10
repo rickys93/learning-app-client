@@ -27,7 +27,7 @@ function NewCategoryForm({myCategories, setMyCategories}) {
                 'Content-Type': 'application/json'
             },
         }
-        const response = await fetch("http://localhost:3000/categories", options)
+        const response = await fetch("https://learning-app-server.onrender.com/categories", options)
         if (response.status === 201) {
             const data = await response.json()
             setPopupContent(<FormComplete message={"Category added succesfully!"}/>)

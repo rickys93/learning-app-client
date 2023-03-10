@@ -32,7 +32,7 @@ export default function Login() {
                 password:loginPassword
             })
         }
-        const response = await fetch("http://localhost:3000/users/login", options)
+        const response = await fetch("https://learning-app-server.onrender.com/users/login", options)
         if (response.status === 200) {
             const data = await response.json()
             // now set user details to user and navigate to main page 

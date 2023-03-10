@@ -16,7 +16,7 @@ export default function Categories() {
       async function loadCategories() {
         const id = user.id ? user.id : "";
         const response = await fetch(
-          `http://localhost:3000/categories?user_id=${id}`
+          `https://learning-app-server.onrender.com/categories?user_id=${id}`
         );
         const data = await response.json();
         const defaultCats = data.filter((category) => category.user_id !== id);

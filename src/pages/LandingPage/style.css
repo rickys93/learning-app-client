@@ -1,5 +1,4 @@
-
-.intro-main{
+.intro-main {
     display: flex;
     justify-content: center;
     padding-bottom: 100px;
@@ -8,7 +7,6 @@
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    
 }
 .intro-div {
     margin-top: 100px;
@@ -18,7 +16,7 @@
     padding: 10px;
     max-width: 600px;
     background-color: aquamarine;
-    box-shadow: 0px 5px 10px 0px rgba(0,255,255,1.9); 
+    box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 1.9);
     color: #000 !important;
 }
 .h1-lp {
@@ -28,14 +26,13 @@
     font-size: 15px;
     padding: 30px;
     text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
     font-size: calc(14px + 0.5vw);
 }
-.cat-btn{
+.cat-btn {
     text-align: center;
     width: 140px;
     height: 45px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -47,25 +44,24 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-    box-shadow: 0px 5px 10px 0px rgba(0,255,255,0.7);    
+    box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 0.7);
 }
 .cat-btn:hover {
-    background-color: #2EE59D;
+    background-color: #2ee59d;
     box-shadow: 0px 15px 20px #2ee59d66;
     color: #fff;
     transform: translateY(-10px);
 }
-.btn-div{
+.btn-div {
     margin: auto;
     margin-top: 25px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 @media (max-width: 800px) {
-    .intro-div{
+    .intro-div {
         margin-top: 60px;
     }
 }

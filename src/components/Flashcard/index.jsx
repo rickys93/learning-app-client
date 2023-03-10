@@ -15,7 +15,7 @@ useEffect(() => {
   
   async function loadCards() {
 
-      const response = await fetch(`http://localhost:3000/questions/categories/${id}?limit=${limit}`);
+      const response = await fetch(`https://learning-app-server.onrender.com/questions/categories/${id}?limit=${limit}`);
       const data = await response.json();
      
      const shuffled = data.sort(()=> 0.5 - Math.random())

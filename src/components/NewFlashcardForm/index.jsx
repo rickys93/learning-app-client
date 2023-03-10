@@ -36,7 +36,7 @@ export default function NewFlashcardForm({categoryData, handleDeleteButton}) {
       },
     } 
     console.log('options', options)
-    const response = await fetch("http://localhost:3000/questions", options)
+    const response = await fetch("https://learning-app-server.onrender.com/questions", options)
     if (response.status === 201) {
         const data = await response.json()
         setPopupContent(<FormComplete message={"Question added succesfully!"} handleBackClick={handleBackClick}/>)

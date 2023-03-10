@@ -47,7 +47,7 @@ export default function App() {
         };
 
         const authResponse = await fetch(
-          "http://localhost:3000/users/authorize",
+          "https://learning-app-server.onrender.com/users/authorize",
           options
         );
         if (authResponse.status === 200) {
