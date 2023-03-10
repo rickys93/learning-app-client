@@ -1,44 +1,44 @@
-.top-div{
+.about-title {
+    margin-top: 30p;
+}
+
+.top-div {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     max-width: 500px;
     margin: auto;
     padding: 10px;
-  
 }
 
-.textarea-1{
-margin-top: 5px;
-width: 100%;
-border-radius: 5px;
-box-shadow: 2px 2px 5px gray;
-min-height: 50px;
+.textarea-1 {
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+    min-height: 50px;
 }
-.ta-btn{
-    background-color:  #3C1B43;
+.ta-btn {
+    background-color: #3c1b43;
     border: none;
     border-radius: 8px;
     height: 25px;
-    color:  rgb(248, 182, 182);
+    color: rgb(248, 182, 182);
     padding: 2px 5px;
     box-shadow: 5px 5px 8px rgba(173, 39, 246, 0.5);
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
-  
-
 }
-.mid-div{
+.mid-div {
     border: 1px solid aquamarine;
     text-align: center;
-   
-    box-shadow: 0px 5px 10px 0px rgba(0,255,255,1.9); 
+
+    box-shadow: 0px 5px 10px 0px rgba(0, 255, 255, 1.9);
     border-radius: 15px;
     margin-top: 20px;
     padding: 20px;
     width: 100%;
-
 }
 .mid-div form {
     margin-top: 20px;

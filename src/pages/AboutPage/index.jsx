@@ -32,7 +32,7 @@ export default function AboutUsPage() {
 
   return (
     <>
-      <h2>About Us</h2>
+      <h2 className="about-title">About Us</h2>
       <div className="top-div">
         <div className="mid-div">
           <p>
